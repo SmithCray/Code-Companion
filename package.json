@@ -21,5 +21,8 @@
   "bugs": {
     "url": "https://github.com/SmithCray/Code-Companion/issues"
   },
-  "homepage": "https://github.com/SmithCray/Code-Companion#readme"
+  "homepage": "https://github.com/SmithCray/Code-Companion#readme",
+  "devDependencies": {
+    "tailwindcss": "^3.0.17"
+  }
 }
