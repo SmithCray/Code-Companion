@@ -11,16 +11,15 @@ ${ /* CRUD: "CREATE" (need all four for project) */ ''}
 
 
 ${ /* Call this User or Profile? */ ''}
-  type ? User {
+  type User {
     _id: ID!
-    name: String!
+    username: String!
 ${ /* Convert this to a URL later? */ ''}
     github: String!
 ${ /* Allows for multiple languages */ ''}
     languages: [Language]
-    # Comment
-${ /* OPTIONAL: Set as a STRING or an INT? Dropdown? (Years: >1, 1, 2, 3, 4, 5+)s */ ''}
-    experienceLevel: String _or_ Int
+${ /* OPTIONAL: Set as a STRING or an NUM? Dropdown? (Years: >1, 1, 2, 3, 4, 5+) */ ''}
+    experienceLevel: String _or_ Number
 ${ /* OPTIONAL: Add associated project(s) here? */ ''}
     projects: [Project]
     skills: String!
@@ -36,17 +35,13 @@ ${ /* Defines languages/technologies as an array */ ''}
     skills: String!
     description: String!
 ${ /* Set user/profile for "creator" and "github" by ID? */ ''}
-   creator: User(.id? -- name)!
+   creator: User(.id? -- username)!
    github: User(.id? -- github)!
 ${ /* Add dedicated communication channel (preferably slack but give other options, must put in something though. ) */ ''}
     communication: String!
   }
 
-  type Language {
-      _id: ID!
-      name: String!
-  }
-
+  ${ /* CHECK IF THESE THREE TYPES ARE NECESSARY */ ''}
   ${ /* Auto-responses to the "UPDATE" and "DELETE" calls (below) */ ''}
   type ProjectListUpdateResponse {
       success: Boolean!
@@ -76,8 +71,9 @@ ${ /*Icebox? If we want to enable ONE user to be searched, include this query */
     user(id: ID!): User
 ${ /* Returns ALL projects */ ''}
     projects: [Project]!
-${ /* Returns projects based on specified language -- this might need to be revised as Language is an array */ ''}
-    projectLang(languages: Language!): Project
+${ /* Use  project.languages and user.languages */ ''}
+    project(languages): Project
+    user(languages): User
 ${ /* Returns projects based on their ID */ ''}
     projectID(id: ID!): Project
   }
