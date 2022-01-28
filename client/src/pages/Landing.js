@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import "../styles/output.css";
+import { Header } from "../Header"
 
 function Landing () {
     let [hidden, setHidden] = useState("hidden");
@@ -13,6 +14,10 @@ function Landing () {
     };
 
     return (
+      { Header }
+      
+      
+     
         
       );
     }

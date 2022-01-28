@@ -24,5 +24,8 @@
   "homepage": "https://github.com/SmithCray/Code-Companion#readme",
   "dependencies": {
     "dotenv": "^14.3.2"
+  },
+  "devDependencies": {
+    "concurrently": "^7.0.0"
   }
 }
