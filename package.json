@@ -26,7 +26,6 @@
     "tailwindcss": "^3.0.17"
   },
   "dependencies": {
-    "@auth0/auth0-react": "^1.9.0",
     "dotenv": "^14.3.2"
   }
 }
