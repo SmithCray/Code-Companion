@@ -24,5 +24,8 @@
   "homepage": "https://github.com/SmithCray/Code-Companion#readme",
   "devDependencies": {
     "tailwindcss": "^3.0.17"
+  },
+  "dependencies": {
+    "dotenv": "^14.3.2"
   }
 }
