@@ -18,6 +18,7 @@ ${ /* Convert this to a URL later? */ ''}
     github: String!
 ${ /* Allows for multiple languages */ ''}
     languages: [Language]
+    # Comment
 ${ /* OPTIONAL: Set as a STRING or an INT? Dropdown? (Years: >1, 1, 2, 3, 4, 5+)s */ ''}
     experienceLevel: String _or_ Int
 ${ /* OPTIONAL: Add associated project(s) here? */ ''}
@@ -28,6 +29,8 @@ ${ /* OPTIONAL: Add associated project(s) here? */ ''}
   type Project {
     _id: ID!
     name: String!
+${ /* Future Ice Box - We can have things go in and auto-delete if they are past a certain age */ ''}
+    dateCreated: String!
 ${ /* Defines languages/technologies as an array */ ''}
     languages: [Language]
     skills: String!
