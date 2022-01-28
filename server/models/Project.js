@@ -20,7 +20,9 @@ const projectSchema = new Schema({
     required: true,
   },
   creator: {
-    // Call user based on ID and add username?
+    type: Schema.Types.ObjectId,
+    ref: "User",
+    required: true,
   },
   github: {
     type: String,
