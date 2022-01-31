@@ -5,6 +5,11 @@ import Header from "../components/Header"
 function Search (){
     return ( <> 
     <Header />
+    <Project />
+    <Project />
+    <Project />
+    <Project />
+    <Project />
      </>
 
 
