@@ -22,11 +22,13 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  creator: {
-    type: Schema.Types.ObjectId,
-    ref: "User",
-    required: true,
-  },
+  creator: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "User",
+      required: true,
+    },
+  ],
   github: {
     type: String,
     required: true,

@@ -30,7 +30,6 @@ const userSchema = new Schema({
   skills: {
     type: String,
     required: true,
-    unique: true,
   },
 });
 

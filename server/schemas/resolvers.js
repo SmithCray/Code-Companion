@@ -2,7 +2,7 @@ const { Project, User } = require("../models");
 
 const resolvers = {
   Query: {
-    user: async () => {
+    users: async () => {
       return User.find({});
     },
     projects: async (parent, { _id }) => {
