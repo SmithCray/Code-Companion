@@ -4,7 +4,7 @@
         "github": "github.com/bkernighan",
         "languages": "JavaScript",
         "experienceLevel": 2,
-        "projects": {},
+        "projects": [],
         "skills": "GraphQL, SQL, NodeJS"      
     },
     {
@@ -12,7 +12,7 @@
         "github": "github.com/mred",
         "languages": "PHP",
         "experienceLevel": 3,
-        "projects": {},
+        "projects": [],
         "skills": "React, Handlebars"      
     },
     {
@@ -20,7 +20,7 @@
         "github": "github.com/jdoe",
         "languages": "C#",
         "experienceLevel": 5,
-        "projects": {},
+        "projects": [],
         "skills": "MongoDB"      
     },
     {
@@ -28,7 +28,7 @@
         "github": "github.com/akay",
         "languages": "HTML",
         "experienceLevel": 1,
-        "projects": {},
+        "projects": [],
         "skills": "Insomnia"      
     },
     {
@@ -36,7 +36,9 @@
         "github": "github.com/dknuth",
         "languages": "CSS",
         "experienceLevel": 1,
-        "projects": {},
+        "projects": [],
         "skills": "Tailwind"      
     }
 ]
+
+ 
