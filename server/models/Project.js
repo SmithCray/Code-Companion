@@ -1,4 +1,4 @@
-const { Project, model } = require("mongoose");
+const { model, Schema } = require("mongoose");
 
 const projectSchema = new Schema({
   // ID assigned in resolver(?)
@@ -6,7 +6,10 @@ const projectSchema = new Schema({
     type: String,
     required: true,
   },
-  dateCreated: Date,
+  dateCreated: {
+    type: Date,
+    default: Date.now,
+  },
   languages: {
     type: String,
     required: true,
