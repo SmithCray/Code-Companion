@@ -1,5 +1,5 @@
 /*
-! tailwindcss v3.0.17 | MIT License | https://tailwindcss.com
+! tailwindcss v3.0.18 | MIT License | https://tailwindcss.com
 */
 
 /*
@@ -475,6 +475,18 @@ Ensure the default browser behavior of the `hidden` attribute.
   margin-right: 0.5rem;
 }
 
+.mt-5 {
+  margin-top: 1.25rem;
+}
+
+.mt-20 {
+  margin-top: 5rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
 .block {
   display: block;
 }
@@ -495,24 +507,76 @@ Ensure the default browser behavior of the `hidden` attribute.
   height: 2rem;
 }
 
+.h-24 {
+  height: 6rem;
+}
+
+.h-2\/4 {
+  height: 50%;
+}
+
 .w-8 {
   width: 2rem;
+}
+
+.w-4 {
+  width: 1rem;
+}
+
+.w-full {
+  width: 100%;
+}
+
+.w-screen {
+  width: 100vw;
+}
+
+.w-9\/12 {
+  width: 75%;
+}
+
+.w-3\/4 {
+  width: 75%;
+}
+
+.w-4\/5 {
+  width: 80%;
+}
+
+.w-5\/6 {
+  width: 83.333333%;
+}
+
+.basis-3\/4 {
+  flex-basis: 75%;
+}
+
+.flex-row {
+  flex-direction: row;
 }
 
 .items-center {
   align-items: center;
 }
 
+.justify-center {
+  justify-content: center;
+}
+
 .justify-between {
   justify-content: space-between;
 }
 
-.border-b {
-  border-bottom-width: 1px;
+.border-2 {
+  border-width: 2px;
 }
 
 .border-t {
   border-top-width: 1px;
+}
+
+.border-b {
+  border-bottom-width: 1px;
 }
 
 .border-black {
@@ -529,11 +593,6 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(56 189 248 / 0));
 }
 
-.from-sky-500 {
-  --tw-gradient-from: #0ea5e9;
-  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(14 165 233 / 0));
-}
-
 .via-blue-900 {
   --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a, var(--tw-gradient-to, rgb(30 58 138 / 0));
 }
@@ -542,8 +601,12 @@ Ensure the default browser behavior of the `hidden` attribute.
   --tw-gradient-to: #38bdf8;
 }
 
-.to-sky-500 {
-  --tw-gradient-to: #0ea5e9;
+.object-center {
+  object-position: center;
+}
+
+.object-top {
+  object-position: top;
 }
 
 .p-2 {
@@ -563,6 +626,10 @@ Ensure the default browser behavior of the `hidden` attribute.
 .py-2 {
   padding-top: 0.5rem;
   padding-bottom: 0.5rem;
+}
+
+.text-center {
+  text-align: center;
 }
 
 .text-xl {
@@ -592,10 +659,6 @@ Ensure the default browser behavior of the `hidden` attribute.
 .hover\:from-sky-500:hover {
   --tw-gradient-from: #0ea5e9;
   --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to, rgb(14 165 233 / 0));
-}
-
-.hover\:via-blue-900:hover {
-  --tw-gradient-stops: var(--tw-gradient-from), #1e3a8a, var(--tw-gradient-to, rgb(30 58 138 / 0));
 }
 
 .hover\:via-blue-800:hover {
