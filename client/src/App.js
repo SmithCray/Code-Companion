@@ -3,13 +3,28 @@ import Header from "./components/Header";
 import "./styles/output.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+import Landing from "./pages/Landing"
+import Profile from "./pages/Profile"
+import Project from "./pages/Project"
+import Search from "./pages/Search"
+import Login from "./pages/Login"
+import Signup from "./pages/SignUp"
+import Create from "./pages/Create"
 
 
 function App() {
   return (
-    <div>
-      <Header />
-    </div>
+    <BrowserRouter>
+      <Switch>
+        <Route path="/" exact component={Landing} />
+        <Route path="/Profile" component={Profile} />
+        <Route path="/Project" component={Project} />
+        <Route path="/Create" component={Create} />
+        <Route path="/Search" component={Search} />
+        <Route path="/Login" component={Login} />
+        <Route path="/Signup" component={Signup} />
+      </Switch>
+    </BrowserRouter>
   );
 }
 

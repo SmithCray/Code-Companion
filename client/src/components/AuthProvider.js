@@ -1,6 +1,6 @@
 import { useHistory } from "react-router-dom";
 import { Auth0Provider } from "@auth0/auth0-react";
-import { getConfig } from "./config";
+import { getConfig } from "../config";
 
 // Please see https://auth0.github.io/auth0-react/interfaces/auth0_provider.auth0provideroptions.html
 // for a full list of the available properties on the provider
