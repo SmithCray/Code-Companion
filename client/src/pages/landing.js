@@ -7,7 +7,7 @@ function Landing() {
     <>
       <Header />
       <div class="flex justify-center">
-        <img class="w-5/6 h-96" src="../Style/img/bannerholder.jpg" alt="">
+        <img class="w-5/6 h-96" src="../Style/img/bannerholder.jpg" alt=""/>
     </div>
     <div class="flex-col items-center">
         <div class="flex-col border-black border-2 mt-6 w-3/4 mx-auto">
@@ -34,7 +34,7 @@ function Landing() {
                 <h3>Searching For:</h3>
             </div>
         </div>
-        <div class="flex-col border-black border-2 mt-10 w-3/4 mx-auto">
+        <div class="flex-col border-black border-2 mt-6 w-3/4 mx-auto">
             <div class="flex justify-between px-3 mb-3 mt-3">
                 <h3>Project Post</h3>
                 <h4>created by:</h4>
@@ -58,7 +58,7 @@ function Landing() {
                 <h3>Searching For:</h3>
             </div>
         </div>
-        <div class="flex-col border-black border-2 mt-10 w-3/4 mx-auto">
+        <div class="flex-col border-black border-2 mt-6 w-3/4 mx-auto">
             <div class="flex justify-between px-3 mb-3 mt-3">
                 <h3>Project Post</h3>
                 <h4>created by:</h4>
