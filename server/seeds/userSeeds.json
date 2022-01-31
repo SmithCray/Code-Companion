@@ -1,0 +1,42 @@
+[
+    {
+        "username": "Brian Kernighan",
+        "github": "github.com/bkernighan",
+        "languages": "JavaScript",
+        "experienceLevel": 2,
+        "projects": {},
+        "skills": "GraphQL, SQL, NodeJS"      
+    },
+    {
+        "username": "Max Red",
+        "github": "github.com/mred",
+        "languages": "PHP",
+        "experienceLevel": 3,
+        "projects": {},
+        "skills": "React, Handlebars"      
+    },
+    {
+        "username": "John Doe",
+        "github": "github.com/jdoe",
+        "languages": "C#",
+        "experienceLevel": 5,
+        "projects": {},
+        "skills": "MongoDB"      
+    },
+    {
+        "username": "Alan Kay",
+        "github": "github.com/akay",
+        "languages": "HTML",
+        "experienceLevel": 1,
+        "projects": {},
+        "skills": "Insomnia"      
+    },
+    {
+        "username": "Don Knuth",
+        "github": "github.com/dknuth",
+        "languages": "CSS",
+        "experienceLevel": 1,
+        "projects": {},
+        "skills": "Tailwind"      
+    }
+]
