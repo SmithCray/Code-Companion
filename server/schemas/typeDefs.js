@@ -23,7 +23,7 @@ const typeDefs = gql`
     skills: String!
     description: String!
 
-    creator: User!
+    creator: [User!]
     github: String!
     communication: String!
   }
