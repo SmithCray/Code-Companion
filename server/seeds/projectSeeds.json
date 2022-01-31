@@ -1,0 +1,33 @@
+[
+    {
+        "name": "Project 1",
+        "dateCreated": "",
+        "languages": "JavaScript",
+        "skills": "GraphQL, SQL, NodeJS",
+        "description": "Building an API for social networks",
+        "creator": "61f82d65ca576c5c4f8c7b78",
+        "github": "github.com/bkernighan",
+        "communication": "slack.com/az224a"      
+    },
+    {
+        "name": "Project 2",
+        "dateCreated": "",
+        "languages": "Python",
+        "skills": "GraphQL, SQL, NodeJS",
+        "description": "Farmers Market Search",
+        "creator": "61f82d65ca576c5c4f8c7b7a",
+        "github": "github.com/mred",
+        "communication": "slack.com/qqqefge"      
+    },
+    {
+        "name": "Project 3",
+        "dateCreated": "",
+        "languages": "C#",
+        "skills": "HTML, CSS, MongoDB",
+        "description": "Building a new Twitter",
+        "creator": "61f82d65ca576c5c4f8c7b7a",
+        "github": "github.com/akay",
+        "communication": "slack.com/ggesd334"      
+    }
+
+]

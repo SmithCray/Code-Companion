@@ -2,14 +2,9 @@ import React, { useState } from "react";
 import "../styles/output.css";
 import Header from "../components/Header"
 
-function Search (){
+function Create (){
     return ( <> 
     <Header />
-    <Project />
-    <Project />
-    <Project />
-    <Project />
-    <Project />
      </>
 
 
@@ -19,6 +14,6 @@ function Search (){
     )
 
 
-};
+}
 
-export default Search;
+export default Create;

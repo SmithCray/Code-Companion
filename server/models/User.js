@@ -1,4 +1,4 @@
-const { User, model } = require("mongoose");
+const { model, Schema } = require("mongoose");
 
 const userSchema = new Schema({
   // ID assigned in resolver(?)
@@ -21,13 +21,15 @@ const userSchema = new Schema({
     type: Number,
     required: true,
   },
-  projects: {
-    //Call Projects object here
-  },
+  projects: [
+    {
+      type: Schema.Types.ObjectId,
+      ref: "Project",
+    },
+  ],
   skills: {
     type: String,
     required: true,
-    unique: true,
   },
 });
 

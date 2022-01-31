@@ -1,6 +1,6 @@
 {
   "domain": "dev-dmu2dpug.us.auth0.com",
   "clientId": "gGONHqBX9XabhaiDsDrWGBTNfbiQu1jO",
-  "audience": ""
+  "audience": "https://dev-dmu2dpug.us.auth0.com/api/v2/"
 }
 
