@@ -11,9 +11,23 @@ const resolvers = {
     },
   },
   Mutation: {
-    //
-    // user: req.oidc.user,
-    //
+    createUser: async (
+      parent,
+      { username, github, languages, experienceLevel, skills },
+      context
+    ) => {
+      const auth0Id = context.user.sub;
+      const user = await User.create({
+        _id: auth0Id,
+        username,
+        github,
+        languages,
+        experienceLevel,
+        //projects,
+        skills,
+      });
+      return { user };
+    },
     updateUser: async (
       parent,
       { projectName, languages, skills, description, github, communication },
@@ -33,7 +47,7 @@ const resolvers = {
       });
 
       await User.findOneAndUpdate(
-        { _id: context.user._id },
+        { _id: context.user.sub },
         { $addToSet: { projects: project._id } },
         { new: true, runValidators: true }
       );
