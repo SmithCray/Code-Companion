@@ -4,7 +4,9 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/output.css";
 import Header from "../components/Header";
 
-const buttonCSS =  "absolute bottom-0 left-1/3 text-2xl px-3 mx-2 my-12 py-2 bg-gradient-to-r from-sky-400 to-blue-700 rounded-lg hover:shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800";
+const buttonCSS =
+  "absolute bottom-0 left-1/3 text-2xl px-3 mx-2 my-12 py-2 bg-gradient-to-r from-sky-400 to-blue-700 rounded-lg hover:shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800";
+
 function Landing() {
   return (
     <>
@@ -16,7 +18,6 @@ function Landing() {
             <Link
               to="/Signup"
               className={buttonCSS}
-              
             >
               SignUp Here
             </Link>
