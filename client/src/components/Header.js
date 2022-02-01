@@ -15,7 +15,7 @@ const mobileButton =
 function Header() {
   let [hidden, setHidden] = useState("hidden");
   // ** To do: Call to /User with a resolver (via App.js) to authenticate
-  // const isAuthenticated = useAuth0();
+  const isAuthenticated = true;
   const location = useLocation();
 
   const MobileHidden = () => {

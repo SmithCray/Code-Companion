@@ -4,6 +4,7 @@ import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/output.css";
 import Header from "../components/Header";
 
+function Landing() {
   return (
     <>
       <Header />

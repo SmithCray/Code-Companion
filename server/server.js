@@ -31,6 +31,7 @@ app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(
   auth({
+    secret: process.env.SECRET,
     authRequired: false,
     idpLogout: true,
   })
