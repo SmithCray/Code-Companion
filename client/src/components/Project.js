@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "../styles/output.css";
 
-function project() {
+function Project() {
   return (
     <div class="flex-col border-black border-2 mt-10 w-3/4 mx-auto">
       <div class="flex justify-between px-3 mb-3 mt-3">

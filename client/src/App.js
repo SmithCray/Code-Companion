@@ -3,15 +3,23 @@ import Header from "./components/Header";
 import "./styles/output.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
-import Landing from "./pages/Landing"
-import Profile from "./pages/Profile"
-import Project from "./pages/Project"
-import Search from "./pages/Search"
-import Login from "./pages/Login"
-import Signup from "./pages/SignUp"
-import Create from "./pages/Create"
+import Landing from "./pages/landing"
+import Profile from "./pages/profile"
+import Project from "./pages/project"
+import Search from "./pages/search"
+import Login from "./pages/login"
+import Signup from "./pages/signUp"
+import Create from "./pages/create"
+import { useEffect, useState } from "react";
 
 function App() {
+  const [user, setUser] = useState();
+  useEffect(() => {
+    fetch("/user")
+      .then((res) => res.json())
+      .then(setUser);
+  }, [setUser]);
+
   return (
     <BrowserRouter>
       <Switch>
