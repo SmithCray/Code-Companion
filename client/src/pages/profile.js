@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import "../styles/output.css";
 import Header from "../components/Header"
 import Profile from "../components/Profile";
+import Project from "./project";
 
-function Profile() {
+function profile() {
     return (
     <div>
         <Header />
@@ -36,4 +37,4 @@ function Profile() {
 
 }
 
-export default Profile;
+export default profile;
