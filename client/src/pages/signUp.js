@@ -5,14 +5,17 @@ import logo from "../styles/img/CodeComputer.png";
 
 const inputStyle = "border border-1 border-black mx-1 px-1 rounded-lg";
 const buttonCSS =
-  "text-2xl px-3 mx-2 my-2 py-2 bg-gradient-to-r from-sky-400 to-blue-700 rounded-lg hover:shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800";
+  "text-2xl px-3 mx-2 my-2 py-2 text-white bg-gradient-to-r from-sky-400 to-blue-700 rounded-lg hover:shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800";
+const dropdownCSS =
+  "dropdown-toggle mx-2 px-6 py-1.5 bg-gradient-to-r from-sky-400 to-blue-700 text-white text-xs leading-tight uppercase rounded shadow-md hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800 hover:shadow-lg focus:bg-gradient-to-r focus:from-sky-500 focus:to-blue-800 focus:shadow-lg focus:outoptionne-none focus:ring-0 active:bg-gradient-to-r active:from-sky-600 active:to-blue-900 active:shadow-lg active:text-white transition duration-150 ease-in-out flex items-centerb whitespace-nowrap";
+const liCSS =
+  "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Signup() {
   const [formState, setFormState] = useState({
-    name: "",
+    username: "",
     github: "",
-    tech: "",
-    about: "",
+    skills: "",
   });
 
   const handleChange = (event) => {
@@ -47,12 +50,12 @@ function Signup() {
             <form className="flex-col">
               <img className="h-32 w-60" src={logo} alt="" />
               <div className="flex m-2 p-2">
-                <h3>Name:</h3>
+                <h3>Username:</h3>
                 <input
                   className={inputStyle}
-                  type="name"
-                  name="name"
-                  value={formState.name}
+                  type="username"
+                  name="username"
+                  value={formState.username}
                   onChange={handleChange}
                 />
               </div>
@@ -66,23 +69,71 @@ function Signup() {
                   onChange={handleChange}
                 />
               </div>
+              <div className="m-2 p-2">
+                <h3>Languages:</h3>
+                <div className="flex" name="languages" input="languages">
+                <div className="flex">
+                  <h3>Javascript</h3>
+                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
+                </div>
+                <div className="flex">
+                  <h3>C#</h3>
+                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
+                </div>
+                <div className="flex">
+                  <h3>Python</h3>
+                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
+                </div>
+                <div className="flex">
+                  <h3>Typescript</h3>
+                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
+                </div>
+                <div className="flex">
+                  <h3>C++</h3>
+                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
+                </div>
+                </div>
+              </div>
+              <div className="flex m-2 p-2">
+                <h3>Years of Experience:</h3>
+                <select
+                  className={dropdownCSS}
+                  name="experienceLevel"
+                  input="experienceLevel"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Choose One
+                  <option className={liCSS} href="#">
+                    -1
+                  </option>
+                  <option className={liCSS} href="#">
+                    1
+                  </option>
+                  <option className={liCSS} href="#">
+                    2
+                  </option>
+                  <option className={liCSS} href="#">
+                    3
+                  </option>
+                  <option className={liCSS} href="#">
+                    4
+                  </option>
+                  <option className={liCSS} href="#">
+                    5
+                  </option>
+                  <option className={liCSS} href="#">
+                    5+
+                  </option>
+                </select>
+              </div>
               <div className="flex m-2 p-2">
                 <h3>Technologies:</h3>
                 <input
                   className={inputStyle}
-                  type="tech"
-                  name="tech"
-                  value={formState.tech}
-                  onChange={handleChange}
-                />
-              </div>
-              <div className="flex m-2 p-2">
-                <h3>About Me:</h3>
-                <input
-                  className={inputStyle}
-                  type="about"
-                  name="about"
-                  value={formState.about}
+                  type="skills"
+                  name="skills"
+                  value={formState.skills}
                   onChange={handleChange}
                 />
               </div>
