@@ -1,6 +1,6 @@
 [
     {
-        "name": "Project 1",
+        "projectName": "Project 1",
         "dateCreated": "",
         "languages": "JavaScript",
         "skills": "GraphQL, SQL, NodeJS",
@@ -10,7 +10,7 @@
         "communication": "slack.com/az224a"      
     },
     {
-        "name": "Project 2",
+        "projectName": "Project 2",
         "dateCreated": "",
         "languages": "Python",
         "skills": "GraphQL, SQL, NodeJS",
@@ -20,7 +20,7 @@
         "communication": "slack.com/qqqefge"      
     },
     {
-        "name": "Project 3",
+        "projectName": "Project 3",
         "dateCreated": "",
         "languages": "C#",
         "skills": "HTML, CSS, MongoDB",

@@ -8,7 +8,6 @@ import Landing from "./pages/landing"
 import Profile from "./pages/profile"
 import Project from "./pages/project"
 import Search from "./pages/search"
-import Login from "./pages/login"
 import Signup from "./pages/signUp"
 import Create from "./pages/create"
 
@@ -28,7 +27,7 @@ function App() {
         <Route path="/Project" component={Project} />
         <Route path="/Create" component={Create} />
         <Route path="/Search" component={Search} />
-        <Route path="/Login" component={Login} />
+        
         <Route path="/Signup" component={Signup} />
       </Switch>
     </BrowserRouter>

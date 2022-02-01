@@ -11,18 +11,13 @@ function Landing() {
   return (
     <>
       <Header />
-      <div className="bg-[url('../styles/img/landing.png')] pt-16">
+      <div className="bg-[url('../styles/img/landing.png')] pt-16 w-screen">
         <div className="flex justify-center">
           <div className="relative text-center mx-2 my-2 h-96 w-1/4 border rounded-md border-black border-2">
             <h1 className="text-4xl mx-2 my-2">Ready To Get Started?</h1>
             <Link
               to="/Signup"
               className={buttonCSS}
-              onClick={() =>
-                loginWithRedirect({
-                  screen_hint: "signup",
-                })
-              }
             >
               SignUp Here
             </Link>

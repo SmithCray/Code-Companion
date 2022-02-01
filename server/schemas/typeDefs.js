@@ -15,7 +15,7 @@ const typeDefs = gql`
 
   type Project {
     _id: ID!
-    name: String!
+    projectName: String!
 
     dateCreated: String
 
@@ -55,16 +55,16 @@ const typeDefs = gql`
   }
 
   type Mutation {
-    addFavProject(projectID: ID!): ProjectListUpdateResponse!
-    deleteFavProject(projectID: ID!): ProjectListUpdateResponse!
+    # addFavProject(projectID: ID!): ProjectListUpdateResponse!
+    # deleteFavProject(projectID: ID!): ProjectListUpdateResponse!
 
-    addExampleProject(projectID: ID!): ProjectListUpdateResponse!
-    deleteExampleProject(projectID: ID!): ProjectListUpdateResponse!
+    # addExampleProject(projectID: ID!): ProjectListUpdateResponse!
+    # deleteExampleProject(projectID: ID!): ProjectListUpdateResponse!
 
-    updateProject(projectID: ID!): UpdateProjectResponse!
+    # updateProject(projectID: ID!): UpdateProjectResponse!
     cancelProject(projectID: ID!): UpdateProjectResponse!
     updateUser(user: ID!): UpdateUserResponse!
-    deleteUser(user: ID!): UpdateUserResponse!
+    # deleteUser(user: ID!): UpdateUserResponse!
   }
 `;
 
