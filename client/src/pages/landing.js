@@ -18,11 +18,11 @@ function Landing() {
             <Link
               to="/Signup"
               className={buttonCSS}
-              onClick={() =>
-                loginWithRedirect({
-                  screen_hint: "signup",
-                })
-              }
+              // onClick={() =>
+              //   loginWithRedirect({
+              //     screen_hint: "signup",
+              //   })
+              // }
             >
               SignUp Here
             </Link>

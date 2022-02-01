@@ -29,8 +29,13 @@ const server = new ApolloServer({
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
+console.log(process.env.SECRET);
 app.use(
   auth({
+    issuerBaseURL: process.env.ISSUER_BASE_URL,
+    clientID: process.env.CLIENT_ID,
+    baseURL: process.env.BASE_URL,
+    secret: process.env.SECRET,
     authRequired: false,
     idpLogout: true,
   })
@@ -40,7 +45,6 @@ server.applyMiddleware({ app });
 if (process.env.NODE_ENV === "production") {
   app.use(express.static(path.join(__dirname, "../client/build")));
 }
-
 app.get("/", (req, res) => {
   console.log(req.oidc.user);
   res.send(`Hello, ${req.oidc?.user?.name || "whoever you are"}`);
