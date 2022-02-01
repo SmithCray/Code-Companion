@@ -45,6 +45,11 @@ const typeDefs = gql`
     message: String
   }
 
+  type CreateUser {
+    success: Boolean!
+    message: String
+  }
+
   type Query {
     users: [User]
     user(id: ID!): User
@@ -64,6 +69,13 @@ const typeDefs = gql`
     # updateProject(projectID: ID!): UpdateProjectResponse!
     cancelProject(projectID: ID!): UpdateProjectResponse!
     updateUser(user: ID!): UpdateUserResponse!
+    createUser(
+      username: String!
+      github: String!
+      languages: String!
+      experienceLevel: Int!
+      skills: String!
+    ): CreateUser!
     # deleteUser(user: ID!): UpdateUserResponse!
   }
 `;
