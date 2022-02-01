@@ -1,70 +1,131 @@
-# Getting Started with Create React App
+![Web-Preview](./src/Style/img/CodeCompanion.png)
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<br>
 
-## Available Scripts
+# <span style="color:lightblue">Code</span> <span style="color:royalblue"> - </span> <span style="color:lightblue">Companion</span>
 
-In the project directory, you can run:
+## 🧐 <span style="color:royalblue">**Description:**</span>
 
-### `npm start`
+[Code-Companion]("add deployed") is a web app that allows Users to team up with people around the world to work on coding projects and share their experience. Our application allows you to post projects you are looking for partners on, join projects other users have posted. User's can also build a custom profile which lets them list all of their relevant skills, accomplishments, and years/months of experience. In addition projects also have specifics on skills/experience as well as what language/stack they are using and or looking for.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+<br>
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## 🛣️ <span style="color:green">**Road to Success:**</span>
 
-### `npm test`
+#
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+<span style="color:orange">**Challenges;**</span>
 
-### `npm run build`
+<span style="color:green">**Successes;**</span>
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+<br>
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### <span style="color:lightblue">**User Story:**</span>
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+<br>
 
-### `npm run eject`
+As a User
 
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
+        I want a website I can go to as a new or experienced programmer to find people to partner with and work on various coding projects with others.
 
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+Then
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
+        I want a list of projects other users are looking for teammates to help create with specifics on language/stack as well as an option to post new projects you are looking for team members on.
 
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
+So that
 
-## Learn More
+        I can continue learning and growing my skill set and network with other programmers that can help mentor me or I can help mentor them depending on experience level.
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+<br>
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+### 🖼️ <span style="color:yellow">**Preview:**</span>
 
-### Code Splitting
+#
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
+![Web-Preview](assets\images\milehiPreview.PNG)
 
-### Analyzing the Bundle Size
+<br>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
+GitHub Repo:
+<br>
+🔗 https://github.com/SmithCray/Code-Companion
 
-### Making a Progressive Web App
+Heroku Deployed:
+<br>
+⚛️ (add deployed link here)
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
+<br>
 
-### Advanced Configuration
+## 🎈 <span style="color:royalblue">**Meet The Team:**</span>
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
+#
 
-### Deployment
+### **Collin Kerr**
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
+<img src="./src/Style/img/p2collin.png" alt="Collin GitHub" width="150px">
 
-### `npm run build` fails to minify
+GitHub Link: https://github.com/collink91
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+<br>
+
+### **Lauren Buchholz**
+
+<img src="./src/Style/img/p2lauren.png" alt="Lauren GitHub" width="150px">
+
+GitHub Link: https://github.com/L-Buchholz
+
+<br>
+
+### **Matt Grogan**
+
+<img src="./src/Style/img/P2MattG.png" alt="Matt GitHub" width="150px">
+
+GitHub Link: https://github.com/mattgrogandev
+
+<br>
+
+### **Cray Smith**
+
+<img src="./src/Style/img/p2cray.png" alt="Cray GitHub" width="150px">
+
+GitHub Link: https://github.com/SmithCray
+
+<br>
+
+### **Kerry Eames**
+
+<img src="./src/Style/img/P2KerryE.png" alt="Kerry GitHub" width="150px">
+
+GitHub Link: https://github.com/KerryEames-Vris
+
+<br>
+
+## 🎉 <span style="color:Gold">**Acknowledgements:**</span>
+
+#
+
+- 🏆 Our bootcamp instructor & TA, Ben Machock & Zac Stowell were a huge help throughout the project in pointing us in the right direction.
+
+<br>
+
+## <span style="color:green">Copyright</span> (c) [2022] [ <span style="color:lightblue">Code</span> <span style="color:royalblue"> - </span> <span style="color:lightblue">Companion</span> ]
+
+#
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
