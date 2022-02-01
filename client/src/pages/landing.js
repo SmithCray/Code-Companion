@@ -1,13 +1,14 @@
 import React from "react";
 import "../styles/output.css";
 import Header from "../components/Header";
+import banner from "../styles/img/bannerholder.jpg"
 
 function Landing() {
   return (
     <>
       <Header />
       <div class="flex justify-center">
-        <img class="w-5/6 h-96" src="../Style/img/bannerholder.jpg" alt="" />
+        <img class="w-5/6 h-96" src={banner} alt="" />
       </div>
       <div class="flex-col items-center">
         <div class="flex-col border-black border-2 mt-6 w-3/4 mx-auto">
