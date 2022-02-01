@@ -3,7 +3,6 @@
 
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-// import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/output.css";
 import Logo from "../styles/img/CodeCompanion.png";
 
@@ -15,7 +14,6 @@ const mobileButton =
 function Header() {
   let [hidden, setHidden] = useState("hidden");
   // ** To do: Call to /User with a resolver (via App.js) to authenticate
-  // const isAuthenticated = useAuth0();
   const location = useLocation();
 
   const MobileHidden = () => {
@@ -27,7 +25,6 @@ function Header() {
   };
 
   // const { loginWithRedirect } = useAuth0();
-  // const { logout } = useAuth0();
 
   return (
     <div className="bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 shadow">
@@ -83,17 +80,13 @@ function Header() {
           )}
             <a
               href="/login"
-              // Changed this as Links are only valid for front-end to front-end (see Logout below)
-              // auth0 automatically provides "/login" and "/logout" routes
               className={desktopButton}
-              // onClick={() => loginWithRedirect()}
             >
               Login
             </a>
             <a
               href="/logout"
               className={desktopButton}
-              // onClick={() => logout()}
             >
               Logout
             </a>
@@ -127,23 +120,18 @@ function Header() {
         ) : (
           <div></div>
         )}
-        
           <a
             href="/login"
             className={`${mobileButton} border-b`}
-            // onClick={() => loginWithRedirect()}
           >
             Login
           </a>
-       
           <a
-            href="/logout"
+            href="/"
             className={`${mobileButton} border-b`}
-            // onClick={() => logout()}
           >
             Logout
           </a>
-      
       </nav>
     </div>
   );
