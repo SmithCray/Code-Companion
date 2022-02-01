@@ -15,7 +15,7 @@ const typeDefs = gql`
 
   type Project {
     _id: ID!
-    name: String!
+    projectName: String!
 
     dateCreated: String
 
