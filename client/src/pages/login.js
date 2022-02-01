@@ -1,3 +1,7 @@
+// This page isn't necessary as auth0 provides a login
+
+/*
+
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import "../styles/output.css";
@@ -9,25 +13,28 @@ const buttonCSS =
   "text-2xl px-3 mx-2 my-2 py-2 bg-gradient-to-r from-sky-400 to-blue-700 rounded-lg hover:shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800";
 
 function Login() {
-  const [formState, setFormState] = useState({ email: "", password: "" });
+  // * NOTE: These aren't necessary as authentication will happen on Auth0 end
+  // const [formState, setFormState] = useState({ email: "", password: "" });
 
-  const handleChange = (event) => {
-    const { name, value } = event.target;
+  // const handleChange = (event) => {
+  //   const { name, value } = event.target;
 
-    setFormState({
-      ...formState,
-      [name]: value,
-    });
-  };
+  //   setFormState({
+  //     ...formState,
+  //     [name]: value,
+  //   });
+  // };
 
   return (
     <>
       <Header />
       <div className="bg-[url('../styles/img/landing.png')] pt-16">
-        
+        <a href="/login">Log In</a>
       </div>
     </>
   );
 }
 
 export default Login;
+
+*/

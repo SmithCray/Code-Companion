@@ -1,6 +1,9 @@
+// ** Change all isAuthenticated references (see below)
+// Commented-out code isn't necessary as we're not using auth0-react library (provides front-end to front-end auth only)
+
 import React, { useState, useEffect } from "react";
 import { useLocation, Link } from "react-router-dom";
-import { useAuth0 } from "@auth0/auth0-react";
+// import { useAuth0 } from "@auth0/auth0-react";
 import "../styles/output.css";
 import Logo from "../styles/img/CodeCompanion.png";
 
@@ -11,7 +14,8 @@ const mobileButton =
 
 function Header() {
   let [hidden, setHidden] = useState("hidden");
-  const isAuthenticated = useAuth0();
+  // ** To do: Call to /User with a resolver (via App.js) to authenticate
+  // const isAuthenticated = useAuth0();
   const location = useLocation();
 
   const MobileHidden = () => {
@@ -22,8 +26,8 @@ function Header() {
     }
   };
 
-  const { loginWithRedirect } = useAuth0();
-  const { logout } = useAuth0();
+  // const { loginWithRedirect } = useAuth0();
+  // const { logout } = useAuth0();
 
   return (
     <div className="bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 shadow">
@@ -50,21 +54,27 @@ function Header() {
               />
             </svg>
           </button>
-          {location.pathname !== "/Search" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+          {location.pathname !== "/Search" &&
+          location.pathname !== "/" &&
+          location.pathname !== "/Signup" ? (
             <Link to="/Search" className={desktopButton}>
               Search Projects
             </Link>
           ) : (
             <div></div>
           )}
-          {location.pathname !== "/Create" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+          {location.pathname !== "/Create" &&
+          location.pathname !== "/" &&
+          location.pathname !== "/Signup" ? (
             <Link to="/Create" className={desktopButton}>
               Create a Project
             </Link>
           ) : (
             <div></div>
           )}
-          {location.pathname !== "/Profile" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+          {location.pathname !== "/Profile" &&
+          location.pathname !== "/" &&
+          location.pathname !== "/Signup" ? (
             <Link to="/Profile" className={desktopButton}>
               My Profile
             </Link>
@@ -72,36 +82,48 @@ function Header() {
             <div></div>
           )}
           {isAuthenticated !== true ? (
-            <Link
-              to="/Profile"
+            <a
+              href="/login"
+              // Changed this as Links are only valid for front-end to front-end (see Logout below)
+              // auth0 automatically provides "/login" and "/logout" routes
               className={desktopButton}
-              onClick={() => loginWithRedirect()}
+              // onClick={() => loginWithRedirect()}
             >
               Login
-            </Link>
+            </a>
           ) : (
-            <Link to="/" className={desktopButton} onClick={() => logout()}>
+            <a
+              href="/logout"
+              className={desktopButton}
+              // onClick={() => logout()}
+            >
               Logout
-            </Link>
+            </a>
           )}
         </nav>
       </div>
       <nav className={hidden}>
-        {location.pathname !== "/Search" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+        {location.pathname !== "/Search" &&
+        location.pathname !== "/" &&
+        location.pathname !== "/Signup" ? (
           <Link to="/Search" className={mobileButton}>
             Search Projects
           </Link>
         ) : (
           <div></div>
         )}
-        {location.pathname !== "/Create" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+        {location.pathname !== "/Create" &&
+        location.pathname !== "/" &&
+        location.pathname !== "/Signup" ? (
           <Link to="/Create" className={mobileButton}>
             Create a Project
           </Link>
         ) : (
           <div></div>
         )}
-        {location.pathname !== "/Profile" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+        {location.pathname !== "/Profile" &&
+        location.pathname !== "/" &&
+        location.pathname !== "/Signup" ? (
           <Link to="/Profile" className={mobileButton}>
             My Profile
           </Link>
@@ -109,21 +131,21 @@ function Header() {
           <div></div>
         )}
         {isAuthenticated !== true ? (
-          <Link
-            to="/Profile"
+          <a
+            href="/login"
             className={`${mobileButton} border-b`}
-            onClick={() => loginWithRedirect()}
+            // onClick={() => loginWithRedirect()}
           >
             Login
-          </Link>
+          </a>
         ) : (
-          <Link
-            to="/"
+          <a
+            href="/logout"
             className={`${mobileButton} border-b`}
-            onClick={() => logout()}
+            // onClick={() => logout()}
           >
             Logout
-          </Link>
+          </a>
         )}
       </nav>
     </div>
