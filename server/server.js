@@ -17,12 +17,24 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  //context: authMiddleware,
+  context: ({ req }) => {
+    const context = {
+      authenticated: req.oidc.isAuthenticated(),
+      user: req.oidc.user,
+    };
+    console.log(context);
+    return context;
+  },
 });
 
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(auth());
+app.use(
+  auth({
+    authRequired: false,
+    idpLogout: true,
+  })
+);
 server.applyMiddleware({ app });
 
 if (process.env.NODE_ENV === "production") {
@@ -30,8 +42,10 @@ if (process.env.NODE_ENV === "production") {
 }
 
 app.get("/", (req, res) => {
-  res.send(`Hello, ${req.oidc.user.name}`);
+  console.log(req.oidc.user);
+  res.send(`Hello, ${req.oidc?.user?.name || "whoever you are"}`);
 });
+app.get("/user", (req, res) => res.json(req.oidc.user));
 app.set("trust proxy", true);
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));

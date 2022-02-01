@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import "../styles/output.css";
 import Header from "../components/Header";
 import banner from "../styles/img/bannerholder.jpg"

@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import Header from "./components/Header";
 import "./styles/output.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
+
 import Landing from "./pages/landing"
 import Profile from "./pages/profile"
 import Project from "./pages/project"
