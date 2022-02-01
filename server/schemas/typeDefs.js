@@ -61,7 +61,7 @@ const typeDefs = gql`
     # addExampleProject(projectID: ID!): ProjectListUpdateResponse!
     # deleteExampleProject(projectID: ID!): ProjectListUpdateResponse!
 
-    updateProject(projectID: ID!): UpdateProjectResponse!
+    # updateProject(projectID: ID!): UpdateProjectResponse!
     cancelProject(projectID: ID!): UpdateProjectResponse!
     updateUser(user: ID!): UpdateUserResponse!
     # deleteUser(user: ID!): UpdateUserResponse!
