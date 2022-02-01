@@ -81,7 +81,6 @@ function Header() {
           ) : (
             <div></div>
           )}
-          {isAuthenticated !== true ? (
             <a
               href="/login"
               // Changed this as Links are only valid for front-end to front-end (see Logout below)
@@ -91,7 +90,6 @@ function Header() {
             >
               Login
             </a>
-          ) : (
             <a
               href="/logout"
               className={desktopButton}
@@ -99,7 +97,6 @@ function Header() {
             >
               Logout
             </a>
-          )}
         </nav>
       </div>
       <nav className={hidden}>
@@ -130,7 +127,7 @@ function Header() {
         ) : (
           <div></div>
         )}
-        {isAuthenticated !== true ? (
+        
           <a
             href="/login"
             className={`${mobileButton} border-b`}
@@ -138,7 +135,7 @@ function Header() {
           >
             Login
           </a>
-        ) : (
+       
           <a
             href="/logout"
             className={`${mobileButton} border-b`}
@@ -146,7 +143,7 @@ function Header() {
           >
             Logout
           </a>
-        )}
+      
       </nav>
     </div>
   );
