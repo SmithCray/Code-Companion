@@ -2,7 +2,7 @@ const { model, Schema } = require("mongoose");
 
 const projectSchema = new Schema({
   // ID assigned in resolver(?)
-  name: {
+  projectName: {
     type: String,
     required: true,
   },

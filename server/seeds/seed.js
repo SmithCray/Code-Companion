@@ -3,7 +3,6 @@ const { User, Project } = require("../models");
 
 const userData = require("./userSeeds.json");
 const projectData = require("./projectSeeds.json");
-// const projectData = require("./projectSeeds.json");
 
 db.once("open", async () => {
   await User.deleteMany({});
