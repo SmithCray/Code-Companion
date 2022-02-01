@@ -18,7 +18,7 @@ export const QUERY_PROJECT = gql`
   query projects {
     projects {
       _id
-      name
+      projectName
       dateCreated
       languages
       skills
