@@ -45,6 +45,7 @@ app.get("/", (req, res) => {
   console.log(req.oidc.user);
   res.send(`Hello, ${req.oidc?.user?.name || "whoever you are"}`);
 });
+app.get("/user", (req, res) => res.json(req.oidc.user));
 app.set("trust proxy", true);
 app.get("*", (req, res) => {
   res.sendFile(path.join(__dirname, "../client/build/index.html"));

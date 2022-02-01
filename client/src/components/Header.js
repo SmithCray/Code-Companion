@@ -22,8 +22,8 @@ function Header() {
     }
   };
 
- const { loginWithRedirect } = useAuth0(); 
- const { logout } = useAuth0();
+  const { loginWithRedirect } = useAuth0();
+  const { logout } = useAuth0();
 
   return (
     <div className="bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 shadow">
@@ -72,7 +72,11 @@ function Header() {
             <div></div>
           )}
           {isAuthenticated !== true ? (
-            <Link to="/Login" className={desktopButton} onClick={() => loginWithRedirect()}>
+            <Link
+              to="/Login"
+              className={desktopButton}
+              onClick={() => loginWithRedirect()}
+            >
               Login
             </Link>
           ) : (
@@ -105,11 +109,19 @@ function Header() {
           <div></div>
         )}
         {isAuthenticated !== true ? (
-          <Link to="/Login" className={`${mobileButton} border-b`} onClick={() => loginWithRedirect()}>
+          <Link
+            to="/Login"
+            className={`${mobileButton} border-b`}
+            onClick={() => loginWithRedirect()}
+          >
             Login
           </Link>
         ) : (
-          <Link to="/" className={`${mobileButton} border-b`} onClick={() => logout()}>
+          <Link
+            to="/"
+            className={`${mobileButton} border-b`}
+            onClick={() => logout()}
+          >
             Logout
           </Link>
         )}
