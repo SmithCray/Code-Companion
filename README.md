@@ -92,7 +92,7 @@ GitHub Link: https://github.com/collink91
 
 ### **Lauren Buchholz**
 
-<img src="client/src/styles/img/p2lauren.png" alt="Lauren GitHub" width="150px">
+<img src="client/src/styles/img/p2lauren.PNG" alt="Lauren GitHub" width="150px">
 
 GitHub Link: https://github.com/L-Buchholz
 
