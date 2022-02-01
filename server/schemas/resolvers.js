@@ -2,10 +2,7 @@ const { Project, User } = require("../models");
 
 const resolvers = {
   Query: {
-    users: async (parent, args, context) => {
-      if (!context.isAuthenticated) {
-        throw Error("User is not authenticated");
-      }
+    users: async () => {
       return User.find({});
     },
     projects: async (parent, { _id }) => {
@@ -14,50 +11,49 @@ const resolvers = {
     },
   },
   Mutation: {
-    updateUser: async (parent, args, context) => {
+    //
+    // user: req.oidc.user,
+    //
+    updateUser: async (
+      parent,
+      { projectName, languages, skills, description, github, communication },
+      context
+    ) => {
       if (!context.isAuthenticated) {
         throw Error("User is not authenticated");
       }
-      return User.findOneAndUpdate(
-        { _id: userId },
+      const project = await Project.create({
+        projectName,
+        languages,
+        skills,
+        description,
+        creator: context.user.username,
+        github,
+        communication,
+      });
+
+      await User.findOneAndUpdate(
+        { _id: context.user._id },
+        { $addToSet: { projects: project._id } },
+        { new: true, runValidators: true }
+      );
+      return project;
+    },
+    cancelProject: async (parent, { projectId }, context) => {
+      if (!context.isAuthenticated) {
+        throw Error("User is not authenticated");
+      }
+      return Project.findOneAndDelete(
+        { _id: projectId },
         {
-          $addToSet: {
+          $pull: {
             projects: {
-              projectName,
-              languages,
-              skills,
-              description,
-              creator: context.user.username,
-              github,
-              communication,
+              _id: projectId,
             },
           },
         },
-        {
-          new: true,
-          runValidators: true,
-        }
+        { new: true }
       );
-    },
-
-
-    cancelProject: async (parent, { userId, projectId }, context) => {
-      if (!context.isAuthenticated) {
-        throw Error("User is not authenticated");
-        }
-        return Project.findOneAndDelete(
-          { _id: projectId },
-          {
-            $pull: {
-              projects: {
-                _id: projectId,
-              },
-            },
-          },
-          { new: true }
-        );
-      }
-      throw new AuthenticationError("You need to be logged in!");
     },
   },
 };

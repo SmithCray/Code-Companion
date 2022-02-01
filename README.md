@@ -1,4 +1,4 @@
-![Web-Preview](client/src/Styles/img/CodeCompanion.png)
+![Web-Preview](../client/src/Styles/img/CodeCompanion.png)
 
 <br>
 
