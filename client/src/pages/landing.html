@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../styles/output.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 shadow">
+        <div class=" flex justify-between">
+            <img src="../styles/img/CodeCompanion.png" class="h-16 w-30 md:h-24 md:w-46 p-2 m-1"></img>
+            <nav class="flex items-center">
+                <button type="button" onClick={mobileHidden} class="md:hidden px-4">
+                    <svg xmlns="http://www.w3.org/2000/svg" class="h-8 w-8" fill="none" viewBox="0 0 24 24"
+                        stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2"
+                            d="M4 6h16M4 12h16M4 18h16" />
+                    </svg>
+                </button>
+                <a to="" class="hidden md:flex text-xl font-bold px-3 mx-2 py-2 hover:shadow hover:text-slate-800">
+                    Search Projects
+                </a>
+                <a to="" class="hidden md:flex text-xl font-bold px-3 mx-2 py-2 hover:shadow hover:text-slate-800">
+                    Create a Project
+                </a>
+                <a to="" class="hidden md:flex text-xl font-bold px-3 mx-2 py-2 hover:shadow hover:text-slate-800">
+                    My Profile
+                </a>
+                <a to="" class="hidden md:flex text-xl font-bold px-3 mx-2 py-2 hover:shadow hover:text-slate-800">
+                    Login
+                </a>
+                <a to="" class="hidden md:flex text-xl font-bold px-3 mx-2 py-2 hover:shadow hover:text-slate-800">
+                    Logout
+                </a>
+            </nav>
+        </div>
+        <nav class="hidden">
+            <a to=""
+                class="block bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 border-t border-black text-sm px-3 py-2 hover:text-slate-800 hover:bg-gradient-to-r hover:from-sky-500 hover:via-blue-800 hover:to-sky-500">
+                Search Projects
+            </a>
+            <a to=""
+                class="block bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 border-t border-black text-sm px-3 py-2 hover:text-slate-800 hover:bg-gradient-to-r hover:from-sky-500 hover:via-blue-800 hover:to-sky-500">
+                Create a Project
+            </a>
+            <a to=""
+                class="block bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 border-t border-black text-sm px-3 py-2 hover:text-slate-800 hover:bg-gradient-to-r hover:from-sky-500 hover:via-blue-800 hover:to-sky-500">
+                My Profile
+            </a>
+            <a to=""
+                class="block bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 border-b border-t border-black text-sm px-3 py-2 hover:text-slate-800 hover:bg-gradient-to-r hover:from-sky-500 hover:via-blue-800 hover:to-sky-500">
+                Login
+            </a>
+            <a to=""
+                class="block bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 border- border-t border-black text-sm px-3 py-2 hover:text-slate-800 hover:bg-gradient-to-r hover:from-sky-500 hover:via-blue-800 hover:to-sky-500">
+                Logout
+            </a>
+        </nav>
+    </div>
+        <div class="flex justify-center">
+            <div class="relative text-center mx-2 my-2 h-96 w-1/4 border rounded-md border-black border-2">
+              <h1 class="text-4xl mx-2 my-2">Ready To Get Started?</h1>
+              <a to="/Signup" class="absolute bottom-0 left-1/3 text-2xl px-3 mx-2 my-12 py-2 bg-gradient-to-r from-sky-400 to-blue-700 rounded-lg hover:shadow hover:bg-gradient-to-r hover:from-sky-500 hover:to-blue-800">Click Here
+              </a>
+            </div>
+        </div>
+    <div class="flex-col items-center">
+        <div class="flex-col border-black border-2 mt-6 rounded-md w-3/4 mx-auto">
+            <div class="flex justify-between px-3 mb-3 mt-3">
+                <h3>Project Post</h3>
+                <h4>created by:</h4>
+                <h4>created on:</h4>
+                <div class="flex border-black border-1">
+                    <h4>Favorite?</h4>
+                    <input type="checkbox" class="mr-20 ml-2 mt-1.5"></input>
+                </div>
+            </div>
+            <div class="flex justify-between px-3 mb-3">
+                <h3>Description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto totam temporibus,
+                    itaque atque nemo excepturi earum veritatis alias, reiciendis harum culpa neque. Eum unde illo quia
+                    assumenda consequuntur, aut culpa sapiente quae, ad doloremque fuga neque quo corporis earum nobis? Quae
+                    fugit voluptatum optio tempora qui illo, exercitationem aut laudantium id quisquam impedit ipsa culpa
+                    repellendus pariatur corrupti voluptatem quo ratione laboriosam. Maxime dignissimos accusantium,
+                    recusandae at, deleniti iste iure, labore perferendis dolorem repellendus saepe dolore ipsam. Accusamus
+                    voluptate vero tempora perferendis quis possimus in id dolores tenetur exercitationem! Nulla dolorum
+                    distinctio reiciendis itaque pariatur veniam recusandae nam est porro?</h3>
+            </div>
+            <div class="flex justify-between px-3 mb-3">
+                <h3>Searching For:</h3>
+            </div>
+        </div>
+        <div class="flex-col border-black border-2 mt-6 w-3/4 mx-auto">
+            <div class="flex justify-between px-3 mb-3 mt-3">
+                <h3>Project Post</h3>
+                <h4>created by:</h4>
+                <h4>created on:</h4>
+                <div class="flex border-black border-1">
+                    <h4>Favorite?</h4>
+                    <input type="checkbox" class="mr-20 ml-2 mt-1.5"></input>
+                </div>
+            </div>
+            <div class="flex justify-between px-3 mb-3">
+                <h3>Description: Lorem ipsum dolor sit, amet consectetur adipisicing elit. Architecto totam temporibus,
+                    itaque atque nemo excepturi earum veritatis alias, reiciendis harum culpa neque. Eum unde illo quia
+                    assumenda consequuntur, aut culpa sapiente quae, ad doloremque fuga neque quo corporis earum nobis? Quae
+                    fugit voluptatum optio tempora qui illo, exercitationem aut laudantium id quisquam impedit ipsa culpa
+                    repellendus pariatur corrupti voluptatem quo ratione laboriosam. Maxime dignissimos accusantium,
+                    recusandae at, deleniti iste iure, labore perferendis dolorem repellendus saepe dolore ipsam. Accusamus
+                    voluptate vero tempora perferendis quis possimus in id dolores tenetur exercitationem! Nulla dolorum
+                    distinctio reiciendis itaque pariatur veniam recusandae nam est porro?</h3>
+            </div>
+            <div class="flex justify-between px-3 mb-3">
+                <h3>Searching For:</h3>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
