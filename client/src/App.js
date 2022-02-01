@@ -11,7 +11,6 @@ import Search from "./pages/search"
 import Login from "./pages/login"
 import Signup from "./pages/signUp"
 import Create from "./pages/create"
-import { useEffect, useState } from "react";
 
 function App() {
   const [user, setUser] = useState();
