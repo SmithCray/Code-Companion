@@ -5,7 +5,7 @@ import "../styles/output.css";
 import Logo from "../styles/img/CodeCompanion.png";
 
 const desktopButton =
-  "hidden md:flex text-xl font-bold px-3 mx-2 py-2 hover:shadow hover:text-slate-800";
+  "hidden md:flex text-xl font-bold px-3 mx-4 py-2 hover:shadow hover:text-slate-800";
 const mobileButton =
   "block bg-gradient-to-r from-sky-400 via-blue-900 to-sky-400 border-t border-black text-sm px-3 py-2 hover:text-slate-800 hover:bg-gradient-to-r hover:from-sky-500 hover:via-blue-800 hover:to-sky-500";
 
@@ -50,22 +50,22 @@ function Header() {
               />
             </svg>
           </button>
-          {location.pathname !== "/Search" && location.pathname !== "/" ? (
-            <Link id="/Search" to="/Search" className={desktopButton}>
+          {location.pathname !== "/Search" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+            <Link to="/Search" className={desktopButton}>
               Search Projects
             </Link>
           ) : (
             <div></div>
           )}
-          {location.pathname !== "/Create" && location.pathname !== "/" ? (
+          {location.pathname !== "/Create" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
             <Link to="/Create" className={desktopButton}>
               Create a Project
             </Link>
           ) : (
             <div></div>
           )}
-          {location.pathname !== "/Profile" && location.pathname !== "/" ? (
-            <Link to="/Profile" id="/Profile" className={desktopButton}>
+          {location.pathname !== "/Profile" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
+            <Link to="/Profile" className={desktopButton}>
               My Profile
             </Link>
           ) : (
@@ -73,7 +73,7 @@ function Header() {
           )}
           {isAuthenticated !== true ? (
             <Link
-              to="/Login"
+              to="/Profile"
               className={desktopButton}
               onClick={() => loginWithRedirect()}
             >
@@ -87,21 +87,21 @@ function Header() {
         </nav>
       </div>
       <nav className={hidden}>
-        {location.pathname !== "/Search" && location.pathname !== "/" ? (
+        {location.pathname !== "/Search" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
           <Link to="/Search" className={mobileButton}>
             Search Projects
           </Link>
         ) : (
           <div></div>
         )}
-        {location.pathname !== "/Create" && location.pathname !== "/" ? (
+        {location.pathname !== "/Create" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
           <Link to="/Create" className={mobileButton}>
             Create a Project
           </Link>
         ) : (
           <div></div>
         )}
-        {location.pathname !== "/Profile" && location.pathname !== "/" ? (
+        {location.pathname !== "/Profile" && location.pathname !== "/" && location.pathname !== "/Signup" ? (
           <Link to="/Profile" className={mobileButton}>
             My Profile
           </Link>
@@ -110,7 +110,7 @@ function Header() {
         )}
         {isAuthenticated !== true ? (
           <Link
-            to="/Login"
+            to="/Profile"
             className={`${mobileButton} border-b`}
             onClick={() => loginWithRedirect()}
           >
