@@ -10,7 +10,7 @@ function Project() {
         <h4>created on:</h4>
         <div class="flex border-black border-1">
           <h4>Favorite?</h4>
-          <input type="checkbox" class="mr-20 ml-1.5"></input>
+          <input type="checkbox" class="mr-20 ml-1.5 mt-1.5"></input>
         </div>
       </div>
       <div class="flex justify-between px-3 mb-3">
