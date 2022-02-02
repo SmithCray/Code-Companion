@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/SmithCray/Code-Companion#readme",
   "dependencies": {
+    "@apollo/client": "^3.5.8",
     "dotenv": "^14.3.2",
     "express-openid-connect": "^2.6.0"
   }
