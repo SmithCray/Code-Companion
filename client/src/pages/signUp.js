@@ -3,7 +3,7 @@ import "../styles/output.css";
 import Header from "../components/Header";
 import logo from "../styles/img/CodeComputer.png";
 import { useMutation } from "@apollo/client";
-import CREATE_USER from "../utils/mutations"
+import { CREATE_USER } from "../utils/mutations";
 
 const inputStyle = "border border-1 border-black mx-1 px-1 rounded-lg";
 const buttonCSS =

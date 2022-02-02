@@ -3,7 +3,7 @@ import "../styles/output.css";
 import Header from "../components/Header";
 import logo from "../styles/img/CodeComputer.png";
 import { useMutation } from "@apollo/client";
-import UPDATE_USER from "../utils/mutations"
+import { UPDATE_USER } from "../utils/mutations";
 
 const inputStyle = "border border-1 border-black mx-1 px-1 rounded-lg";
 const buttonCSS =
@@ -14,7 +14,6 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Create() {
-
   const [addProject, { error }] = useMutation(UPDATE_USER);
 
   const [formState, setFormState] = useState({
@@ -39,7 +38,14 @@ function Create() {
 
     try {
       const data = await addProject({
-        variables: { projectName, languages, skills, description, github, communication },
+        variables: {
+          projectName,
+          languages,
+          skills,
+          description,
+          github,
+          communication,
+        },
       });
 
       setFormState({
@@ -53,7 +59,6 @@ function Create() {
       console.error(err);
     }
   };
-
 
   return (
     <>
