@@ -5,11 +5,11 @@ import { useQuery } from '@apollo/client';
 import { QUERY_PROJECT } from '../utils/queries';
 
 function Project() {
-  const { projectId } = useParams();
+  const { projectName } = useParams();
 
   const { loading, data } = useQuery(QUERY_PROJECT, 
    { 
-      variables: { projectId: projectId },
+      variables: { projectName: projectName },
   }
   );
 
