@@ -3,7 +3,7 @@ import "../styles/output.css";
 import Header from "../components/Header";
 import logo from "../styles/img/CodeComputer.png";
 import { useMutation } from "@apollo/client";
-import CREATE_PROJECT from "../utils/mutations"
+import UPDATE_USER from "../utils/mutations"
 
 const inputStyle = "border border-1 border-black mx-1 px-1 rounded-lg";
 const buttonCSS =
@@ -15,7 +15,7 @@ const liCSS =
 
 function Create() {
 
-  const [addProject, { error }] = useMutation(CREATE_PROJECT);
+  const [addProject, { error }] = useMutation(UPDATE_USER);
 
   const [formState, setFormState] = useState({
     projectName: "",
