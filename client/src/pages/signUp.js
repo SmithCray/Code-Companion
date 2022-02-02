@@ -39,6 +39,11 @@ function Signup() {
   //   } catch (e) {
   //     console.error(e);
   //   }
+  //   setFormState({
+  //     username: "",
+  //     github: "",
+  //     skills: "",
+  //   });
   // };
 
   return (
@@ -47,7 +52,9 @@ function Signup() {
       <div className="bg-[url('../styles/img/landing.png')] pt-16">
         <div className="flex justify-center bg-white border-black border-2 rounded-md w-1/2 mx-auto mt-20">
           <div>
-            <form className="flex-col">
+            <form className="flex-col" 
+            // onSubmit={handleFormSubmit}
+            >
               <img className="h-32 w-60" src={logo} alt="" />
               <div className="flex m-2 p-2">
                 <h3>Username:</h3>
@@ -137,7 +144,7 @@ function Signup() {
                   onChange={handleChange}
                 />
               </div>
-              <button className={buttonCSS}>Save</button>
+              <button className={buttonCSS} type="submit">Save</button>
             </form>
           </div>
         </div>
