@@ -72,7 +72,7 @@ function Header() {
           {location.pathname !== "/Profile" &&
           location.pathname !== "/" &&
           location.pathname !== "/Signup" ? (
-            <Link to="/Profile" className={desktopButton}>
+            <Link to="/Main" className={desktopButton}>
               My Profile
             </Link>
           ) : (
@@ -114,7 +114,7 @@ function Header() {
         {location.pathname !== "/Profile" &&
         location.pathname !== "/" &&
         location.pathname !== "/Signup" ? (
-          <Link to="/Profile" className={mobileButton}>
+          <Link to="/Main/" className={mobileButton}>
             My Profile
           </Link>
         ) : (

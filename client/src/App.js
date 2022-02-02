@@ -5,7 +5,7 @@ import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
 import Landing from "./pages/landing"
-import Profile from "./pages/profile"
+import Main from "./pages/main"
 import Project from "./pages/project"
 import Search from "./pages/search"
 import Signup from "./pages/signUp"
@@ -23,11 +23,10 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Landing} />
-        <Route path="/Profile" component={Profile} />
+        <Route path="/Main/:Userid" component={Main} />
         <Route path="/Project" component={Project} />
         <Route path="/Create" component={Create} />
         <Route path="/Search" component={Search} />
-        
         <Route path="/Signup" component={Signup} />
       </Switch>
     </BrowserRouter>
