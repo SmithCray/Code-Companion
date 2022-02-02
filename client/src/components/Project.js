@@ -1,17 +1,15 @@
 import React, { useState } from "react";
-import { useParams } from "react-router-dom"
+import { useParams } from "react-router-dom";
 import "../styles/output.css";
-import { useQuery } from '@apollo/client';
-import { QUERY_PROJECT } from '../utils/queries';
+import { useQuery } from "@apollo/client";
+import { QUERY_PROJECT } from "../utils/queries";
 
 function Project() {
   const { projectName } = useParams();
 
-  const { loading, data } = useQuery(QUERY_PROJECT, 
-   { 
-      variables: { projectName: projectName },
-  }
-  );
+  const { loading, data } = useQuery(QUERY_PROJECT, {
+    variables: { projectName: projectName },
+  });
 
   const project = data?.project || {};
 
@@ -31,9 +29,7 @@ function Project() {
         </div>
       </div>
       <div class="flex justify-between px-3 mb-3">
-        <h3>
-          Description: {project.description}
-        </h3>
+        <h3>Description: {project.description}</h3>
       </div>
       <div class="flex justify-between px-3 mb-3">
         <h3>Searching For: {project.languages}</h3>
