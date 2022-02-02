@@ -6,10 +6,7 @@ import { useQuery } from "@apollo/client";
 import { QUERY_PROJECT } from "../utils/queries";
 
 function Search() {
-  const {
-    loading,
-    data: { projects },
-  } = useQuery(QUERY_PROJECT);
+  const { loading, data } = useQuery(QUERY_PROJECT);
   return (
     <>
       <Header />
@@ -22,9 +19,10 @@ function Search() {
             <p>Loading...</p>
           ) : (
             <ul>
-              {projects?.map((project) => (
-                <li key={project._id}>{project.projectName}</li>
-              ))}
+              {data &&
+                data?.projects?.map((project) => (
+                  <li key={project._id}>{project.projectName}</li>
+                ))}
             </ul>
           )}
         </div>
