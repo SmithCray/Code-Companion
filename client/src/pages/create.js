@@ -2,6 +2,8 @@ import React, { useState } from "react";
 import "../styles/output.css";
 import Header from "../components/Header";
 import logo from "../styles/img/CodeComputer.png";
+import { useMutation } from "@apollo/client";
+import CREATE_PROJECT from "../utils/mutations"
 
 const inputStyle = "border border-1 border-black mx-1 px-1 rounded-lg";
 const buttonCSS =
@@ -12,12 +14,15 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Create() {
+
+  const [addProject, { error }] = useMutation(CREATE_PROJECT);
+
   const [formState, setFormState] = useState({
     projectName: "",
     github: "",
     skills: "",
     communication: "",
-    description: ""
+    description: "",
   });
 
   const handleChange = (event) => {
@@ -29,27 +34,26 @@ function Create() {
     });
   };
 
-//   const handleFormSubmit = async (event) => {
-//     event.preventDefault();
-//     console.log(formState);
-//     try {
-//       const { data } = await login({
-//         variables: { ...formState },
-//       });
+  const handleFormSubmit = async (event) => {
+    event.preventDefault();
 
-//       Auth.login(data.login.token);
-//     } catch (e) {
-//       console.error(e);
-//     }
+    try {
+      const data = await addProject({
+        variables: { projectName, languages, skills, description, github, communication },
+      });
 
-//     setFormState({
-//         projectName: "",
-//         github: "",
-//         skills: "",
-//         communication: "",
-//         description: ""
-//       });
-//   };
+      setFormState({
+        projectName: "",
+        github: "",
+        skills: "",
+        communication: "",
+        description: "",
+      });
+    } catch (err) {
+      console.error(err);
+    }
+  };
+
 
   return (
     <>
@@ -57,9 +61,7 @@ function Create() {
       <div className="bg-[url('../styles/img/landing.png')] pt-16">
         <div className="flex justify-center bg-white border-black border-2 rounded-md w-1/2 mx-auto mt-20">
           <div>
-            <form className="flex-col" 
-            // onSubmit={handleFormSubmit}
-            >
+            <form className="flex-col" onSubmit={handleFormSubmit}>
               <img className="h-32 w-60" src={logo} alt="" />
               <div className="flex m-2 p-2">
                 <h3>Project Name:</h3>
@@ -84,26 +86,41 @@ function Create() {
               <div className="m-2 p-2">
                 <h3>Languages:</h3>
                 <div className="flex" name="languages" input="languages">
-                <div className="flex">
-                  <h3>Javascript</h3>
-                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
-                </div>
-                <div className="flex">
-                  <h3>C#</h3>
-                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
-                </div>
-                <div className="flex">
-                  <h3>Python</h3>
-                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
-                </div>
-                <div className="flex">
-                  <h3>Typescript</h3>
-                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
-                </div>
-                <div className="flex">
-                  <h3>C++</h3>
-                  <input type="checkbox" className="mr-20 ml-1.5 mt-1.5"></input>
-                </div>
+                  <div className="flex">
+                    <h3>Javascript</h3>
+                    <input
+                      type="checkbox"
+                      className="mr-20 ml-1.5 mt-1.5"
+                    ></input>
+                  </div>
+                  <div className="flex">
+                    <h3>C#</h3>
+                    <input
+                      type="checkbox"
+                      className="mr-20 ml-1.5 mt-1.5"
+                    ></input>
+                  </div>
+                  <div className="flex">
+                    <h3>Python</h3>
+                    <input
+                      type="checkbox"
+                      className="mr-20 ml-1.5 mt-1.5"
+                    ></input>
+                  </div>
+                  <div className="flex">
+                    <h3>Typescript</h3>
+                    <input
+                      type="checkbox"
+                      className="mr-20 ml-1.5 mt-1.5"
+                    ></input>
+                  </div>
+                  <div className="flex">
+                    <h3>C++</h3>
+                    <input
+                      type="checkbox"
+                      className="mr-20 ml-1.5 mt-1.5"
+                    ></input>
+                  </div>
                 </div>
               </div>
               <div className="flex m-2 p-2">
@@ -136,7 +153,9 @@ function Create() {
                   onChange={handleChange}
                 />
               </div>
-              <button className={buttonCSS} type="submit">Save</button>
+              <button className={buttonCSS} type="submit">
+                Save
+              </button>
             </form>
           </div>
         </div>
