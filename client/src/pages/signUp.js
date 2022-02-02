@@ -18,6 +18,7 @@ const [username, setUsername] = useState('');
 const [github, setGithub] = useState('');
 const [languages, setLanguages] = useState('');
 const [skills, setSkills] = useState('');
+const [experienceLevel, setExperienceLevel] = useState('');
 
   const [addProfile, { error }] = useMutation(CREATE_USER);
 
@@ -26,6 +27,7 @@ const [skills, setSkills] = useState('');
     github: "",
     languages: "",
     skills: "",
+    experienceLevel: "",
   });
 
   const handleChange = (event) => {
@@ -49,6 +51,7 @@ const [skills, setSkills] = useState('');
       setGithub('');
       setLanguages('');
       setSkills('');
+      setExperienceLevel('');
         } catch (err) {
       console.error(err);
     }
@@ -94,7 +97,14 @@ const [skills, setSkills] = useState('');
               </div>
               <div className="flex m-2 p-2">
                 <h3>Years of Experience:</h3>
-                <select
+                <input
+                  className={inputStyle}
+                  type="experienceLevel"
+                  name="experienceLevel"
+                  value={formState.experienceLevel}
+                  onChange={handleChange}
+                />
+                {/* <select
                   className={dropdownCSS}
                   name="experienceLevel"
                   input="experienceLevel"
@@ -123,7 +133,7 @@ const [skills, setSkills] = useState('');
                   <option className={liCSS} href="#">
                     5+
                   </option>
-                </select>
+                </select> */}
               </div>
               <div className="flex m-2 p-2">
                 <h3>Technologies:</h3>
