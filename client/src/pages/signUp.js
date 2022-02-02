@@ -29,7 +29,6 @@ function Signup() {
     skills: "",
     experienceLevel: "",
   });
-  console.log(data);
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -38,17 +37,13 @@ function Signup() {
       [name]: value,
     });
   };
-  console.log(error);
 
   const handleFormSubmit = async (event) => {
-    console.log("we are in the handler");
     event.preventDefault();
 
-    console.log("do we get here");
     addProfile({
       variables: { username, github, languages, experienceLevel, skills },
     });
-    console.log("how about here");
 
     setUsername("");
     setGithub("");
