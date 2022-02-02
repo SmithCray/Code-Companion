@@ -56,6 +56,7 @@ const typeDefs = gql`
     projectLang(languages: String!): Project
     userLang(languages: String!): [User]
     projectID(id: ID!): Project
+    me: User
   }
 
   type Mutation {
