@@ -14,11 +14,17 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Signup({ id }) {
+const [username, setUsername] = useState('');
+const [github, setGithub] = useState('');
+const [languages, setLanguages] = useState('');
+const [skills, setSkills] = useState('');
+
   const [addProfile, { error }] = useMutation(CREATE_USER);
 
   const [formState, setFormState] = useState({
     username: "",
     github: "",
+    languages: "",
     skills: "",
   });
 
@@ -39,12 +45,11 @@ function Signup({ id }) {
         variables: { username, github, languages, experienceLevel, skills },
       });
 
-      setFormState({
-        username: "",
-        github: "",
-        skills: "",
-      });
-    } catch (err) {
+      setUsername('');
+      setGithub('');
+      setLanguages('');
+      setSkills('');
+        } catch (err) {
       console.error(err);
     }
   };
@@ -79,43 +84,13 @@ function Signup({ id }) {
               </div>
               <div className="m-2 p-2">
                 <h3>Languages:</h3>
-                <div className="flex" name="languages" input="languages">
-                  <div className="flex">
-                    <h3>Javascript</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>C#</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>Python</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>Typescript</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>C++</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                </div>
+                <input
+                  className={inputStyle}
+                  type="languages"
+                  name="languages"
+                  value={formState.languages}
+                  onChange={handleChange}
+                />
               </div>
               <div className="flex m-2 p-2">
                 <h3>Years of Experience:</h3>
