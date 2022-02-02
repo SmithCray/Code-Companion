@@ -51,28 +51,22 @@ function Header() {
               />
             </svg>
           </button>
-          {location.pathname !== "/Search" &&
-          location.pathname !== "/" &&
-          location.pathname !== "/Signup" ? (
+          {location.pathname !== "/Search" ? (
             <Link to="/Search" className={desktopButton}>
               Search Projects
             </Link>
           ) : (
             <div></div>
           )}
-          {location.pathname !== "/Create" &&
-          location.pathname !== "/" &&
-          location.pathname !== "/Signup" ? (
+          {location.pathname !== "/Create" ? (
             <Link to="/Create" className={desktopButton}>
               Create a Project
             </Link>
           ) : (
             <div></div>
           )}
-          {location.pathname !== "/Profile" &&
-          location.pathname !== "/" &&
-          location.pathname !== "/Signup" ? (
-            <Link to="/Profile" className={desktopButton}>
+          {location.pathname !== "/Profile" ? (
+            <Link to="/Main" className={desktopButton}>
               My Profile
             </Link>
           ) : (
@@ -93,28 +87,22 @@ function Header() {
         </nav>
       </div>
       <nav className={hidden}>
-        {location.pathname !== "/Search" &&
-        location.pathname !== "/" &&
-        location.pathname !== "/Signup" ? (
+        {location.pathname !== "/Search" ? (
           <Link to="/Search" className={mobileButton}>
             Search Projects
           </Link>
         ) : (
           <div></div>
         )}
-        {location.pathname !== "/Create" &&
-        location.pathname !== "/" &&
-        location.pathname !== "/Signup" ? (
+        {location.pathname !== "/Create" ? (
           <Link to="/Create" className={mobileButton}>
             Create a Project
           </Link>
         ) : (
           <div></div>
         )}
-        {location.pathname !== "/Profile" &&
-        location.pathname !== "/" &&
-        location.pathname !== "/Signup" ? (
-          <Link to="/Profile" className={mobileButton}>
+        {location.pathname !== "/Profile" ? (
+          <Link to="/Main/" className={mobileButton}>
             My Profile
           </Link>
         ) : (

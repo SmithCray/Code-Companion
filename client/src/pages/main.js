@@ -4,7 +4,7 @@ import Header from "../components/Header"
 import Profile from "../components/Profile";
 import Project from "./project";
 
-function profile() {
+function Main() {
     return (
     <div>
         <Header />
@@ -37,4 +37,4 @@ function profile() {
 
 }
 
-export default profile;
+export default Main;
