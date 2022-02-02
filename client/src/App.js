@@ -4,13 +4,12 @@ import "./styles/output.css";
 import { BrowserRouter, Route, Switch } from "react-router-dom";
 import { useAuth0 } from "@auth0/auth0-react";
 
-
-import Landing from "./pages/landing"
-import Main from "./pages/main"
-import Project from "./pages/project"
-import Search from "./pages/search"
-import Signup from "./pages/signUp"
-import Create from "./pages/create"
+import Landing from "./pages/landing";
+import Main from "./pages/main";
+import Project from "./pages/project";
+import Search from "./pages/search";
+import Signup from "./pages/signUp";
+import Create from "./pages/create";
 
 function App() {
   const [user, setUser] = useState();

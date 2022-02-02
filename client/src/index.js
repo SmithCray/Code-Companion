@@ -8,18 +8,19 @@ import {
   InMemoryCache,
   ApolloProvider,
   createHttpLink,
-} from '@apollo/client';
+} from "@apollo/client";
 
 const client = new ApolloClient({
+  uri: "/graphql",
   cache: new InMemoryCache(),
 });
 
 ReactDOM.render(
   <BrowserRouter>
     <AuthProvider>
-    <ApolloProvider client={client}>
-      <App />
-    </ApolloProvider>
+      <ApolloProvider client={client}>
+        <App />
+      </ApolloProvider>
     </AuthProvider>
   </BrowserRouter>,
   document.getElementById("root")

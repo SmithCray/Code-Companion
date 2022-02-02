@@ -14,13 +14,12 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Create({ userId }) {
-  const [projectName, setProjectName] = useState('');
-  const [github, setGithub] = useState('');
-  const [skills, setSkills] = useState('');
-  const [communication, setCommunication] = useState('');
-  const [description, setDescription] = useState('');
-  const [languages, setLanguages] = useState('');
-
+  const [projectName, setProjectName] = useState("");
+  const [github, setGithub] = useState("");
+  const [skills, setSkills] = useState("");
+  const [communication, setCommunication] = useState("");
+  const [description, setDescription] = useState("");
+  const [languages, setLanguages] = useState("");
 
   const [addProject, { error }] = useMutation(UPDATE_USER);
 
@@ -41,8 +40,9 @@ function Create({ userId }) {
       [name]: value,
     });
   };
-
+  console.log("we are rendering");
   const handleFormSubmit = async (event) => {
+    console.log("got here");
     event.preventDefault();
 
     try {
@@ -58,13 +58,12 @@ function Create({ userId }) {
         },
       });
 
-      
-        setProjectName('');
-        setGithub('');
-        setSkills('');
-        setCommunication('');
-        setDescription('');
-        setLanguages('');
+      setProjectName("");
+      setGithub("");
+      setSkills("");
+      setCommunication("");
+      setDescription("");
+      setLanguages("");
     } catch (err) {
       console.error(err);
     }

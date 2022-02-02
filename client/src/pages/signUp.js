@@ -14,13 +14,13 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Signup() {
-const [username, setUsername] = useState('');
-const [github, setGithub] = useState('');
-const [languages, setLanguages] = useState('');
-const [skills, setSkills] = useState('');
-const [experienceLevel, setExperienceLevel] = useState('');
+  const [username, setUsername] = useState("");
+  const [github, setGithub] = useState("");
+  const [languages, setLanguages] = useState("");
+  const [skills, setSkills] = useState("");
+  const [experienceLevel, setExperienceLevel] = useState("");
 
-  const [addProfile, { error }] = useMutation(CREATE_USER);
+  const [addProfile, { error, data }] = useMutation(CREATE_USER);
 
   const [formState, setFormState] = useState({
     username: "",
@@ -29,7 +29,7 @@ const [experienceLevel, setExperienceLevel] = useState('');
     skills: "",
     experienceLevel: "",
   });
-
+  console.log(data);
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -38,23 +38,23 @@ const [experienceLevel, setExperienceLevel] = useState('');
       [name]: value,
     });
   };
+  console.log(error);
 
   const handleFormSubmit = async (event) => {
+    console.log("we are in the handler");
     event.preventDefault();
 
-    try {
-      const data = await addProfile({
-        variables: { username, github, languages, experienceLevel, skills },
-      });
+    console.log("do we get here");
+    addProfile({
+      variables: { username, github, languages, experienceLevel, skills },
+    });
+    console.log("how about here");
 
-      setUsername('');
-      setGithub('');
-      setLanguages('');
-      setSkills('');
-      setExperienceLevel('');
-        } catch (err) {
-      console.error(err);
-    }
+    setUsername("");
+    setGithub("");
+    setLanguages("");
+    setSkills("");
+    setExperienceLevel("");
   };
 
   return (
