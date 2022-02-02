@@ -22,14 +22,16 @@ export const QUERY_ME = gql`
       github
       languages
       experienceLevel
-      projects
+      projects {
+        projectName
+      }
       skills
     }
   }
 `;
 
 export const QUERY_PROJECT = gql`
-  query projects {
+  query getProjects {
     projects {
       _id
       projectName
