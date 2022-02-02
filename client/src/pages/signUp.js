@@ -14,12 +14,6 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Signup() {
-  const [username, setUsername] = useState("");
-  const [github, setGithub] = useState("");
-  const [languages, setLanguages] = useState("");
-  const [skills, setSkills] = useState("");
-  const [experienceLevel, setExperienceLevel] = useState("");
-
   const [addProfile, { error, data }] = useMutation(CREATE_USER);
 
   const [formState, setFormState] = useState({
@@ -40,16 +34,24 @@ function Signup() {
 
   const handleFormSubmit = async (event) => {
     event.preventDefault();
+    const { username, github, languages, experienceLevel, skills } = formState;
 
     addProfile({
-      variables: { username, github, languages, experienceLevel, skills },
+      variables: {
+        username,
+        github,
+        languages,
+        experienceLevel: Number(experienceLevel),
+        skills,
+      },
     });
-
-    setUsername("");
-    setGithub("");
-    setLanguages("");
-    setSkills("");
-    setExperienceLevel("");
+    setFormState({
+      username: "",
+      github: "",
+      languages: "",
+      skills: "",
+      experienceLevel: "",
+    });
   };
 
   return (
