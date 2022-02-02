@@ -13,7 +13,7 @@ const dropdownCSS =
 const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
-function Signup({ id }) {
+function Signup() {
 const [username, setUsername] = useState('');
 const [github, setGithub] = useState('');
 const [languages, setLanguages] = useState('');

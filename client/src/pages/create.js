@@ -13,7 +13,7 @@ const dropdownCSS =
 const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
-function Create() {
+function Create({ userId }) {
   const [projectName, setProjectName] = useState('');
   const [github, setGithub] = useState('');
   const [skills, setSkills] = useState('');
@@ -48,6 +48,7 @@ function Create() {
     try {
       const data = await addProject({
         variables: {
+          userId,
           projectName,
           languages,
           skills,
