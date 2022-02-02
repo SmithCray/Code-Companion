@@ -17,16 +17,37 @@ const resolvers = {
     },
   },
   Mutation: {
-    //
-    // user: req.oidc.user,
-    //
+    createUser: async (
+      parent,
+      { username, github, languages, experienceLevel, skills },
+      context
+    ) => {
+      if (!context.authenticated) {
+        throw Error("User is not authenticated");
+      }
+      const userId = context.user.sub;
+      const user = await User.create({
+        userId,
+        username,
+        github,
+        languages,
+        experienceLevel,
+        //projects,
+        skills,
+      });
+      return user;
+    },
     updateUser: async (
       parent,
       { projectName, languages, skills, description, github, communication },
       context
     ) => {
-      if (!context.isAuthenticated) {
+      if (!context.authenticated) {
         throw Error("User is not authenticated");
+      }
+      const user = await User.findOne({ userId: context.user.sub });
+      if (!user) {
+        throw Error("You have not yet created a user");
       }
       const project = await Project.create({
         projectName,
@@ -38,28 +59,27 @@ const resolvers = {
         communication,
       });
 
-      await User.findOneAndUpdate(
-        { _id: context.user._id },
+      await user.update(
         { $addToSet: { projects: project._id } },
         { new: true, runValidators: true }
       );
       return project;
     },
-    cancelProject: async (parent, { projectId }, context) => {
-      if (!context.isAuthenticated) {
+    cancelProject: async (parent, { projectName }, context) => {
+      if (!context.authenticated) {
         throw Error("User is not authenticated");
       }
-      return Project.findOneAndDelete(
-        { _id: projectId },
+      await Project.findOneAndDelete(
+        { projectName, creator: context.user.username },
         {
           $pull: {
             projects: {
-              _id: projectId,
+              projectName,
             },
           },
-        },
-        { new: true }
+        }
       );
+      return { success: true, message: "got'em" };
     },
   },
 };

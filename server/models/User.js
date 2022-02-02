@@ -2,6 +2,11 @@ const { model, Schema } = require("mongoose");
 
 const userSchema = new Schema({
   // ID assigned in resolver(?)
+  userId: {
+    type: String,
+    required: true,
+    unique: true,
+  },
   username: {
     type: String,
     required: true,

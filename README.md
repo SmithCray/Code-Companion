@@ -1,4 +1,4 @@
-![Web-Preview](../client/src/Styles/img/CodeCompanion.png)
+![Web-Preview](client/src/styles/img/CodeCompanion.png)
 
 <br>
 
@@ -64,7 +64,7 @@ So that
 
 #
 
-![Web-Preview](client/src/Styles/img/codecompanionPre.png)
+![Web-Preview](client/src/styles/img/codecompanionPre.png)
 
 <br>
 
@@ -84,7 +84,7 @@ Heroku Deployed:
 
 ### **Collin Kerr**
 
-<img src="client/src/Styles/img/p2collin.png" alt="Collin GitHub" width="150px">
+<img src="client/src/styles/img/p2collin.png" alt="Collin GitHub" width="150px">
 
 GitHub Link: https://github.com/collink91
 
@@ -92,7 +92,7 @@ GitHub Link: https://github.com/collink91
 
 ### **Lauren Buchholz**
 
-<img src="client/src/Styles/img/p2lauren.png" alt="Lauren GitHub" width="150px">
+<img src="client/src/styles/img/p2lauren.PNG" alt="Lauren GitHub" width="150px">
 
 GitHub Link: https://github.com/L-Buchholz
 
@@ -100,7 +100,7 @@ GitHub Link: https://github.com/L-Buchholz
 
 ### **Matt Grogan**
 
-<img src="client/src/Styles/img/P2MattG.png" alt="Matt GitHub" width="150px">
+<img src="client/src/styles/img/P2MattG.png" alt="Matt GitHub" width="150px">
 
 GitHub Link: https://github.com/mattgrogandev
 
@@ -108,7 +108,7 @@ GitHub Link: https://github.com/mattgrogandev
 
 ### **Cray Smith**
 
-<img src="client/src/Styles/img/p2cray.png" alt="Cray GitHub" width="150px">
+<img src="client/src/styles/img/p2cray.png" alt="Cray GitHub" width="150px">
 
 GitHub Link: https://github.com/SmithCray
 
@@ -116,7 +116,7 @@ GitHub Link: https://github.com/SmithCray
 
 ### **Kerry Eames**
 
-<img src="client/src/Styles/img/P2KerryE.png" alt="Kerry GitHub" width="150px">
+<img src="client/src/styles/img/P2KerryE.png" alt="Kerry GitHub" width="150px">
 
 GitHub Link: https://github.com/KerryEames-Vris
 

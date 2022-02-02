@@ -22,7 +22,6 @@ const server = new ApolloServer({
       authenticated: req.oidc.isAuthenticated(),
       user: req.oidc.user,
     };
-    console.log(context);
     return context;
   },
 });
