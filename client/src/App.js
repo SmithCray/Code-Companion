@@ -23,7 +23,7 @@ function App() {
     <BrowserRouter>
       <Switch>
         <Route path="/" exact component={Landing} />
-        <Route path="/Main/:Userid" component={Main} />
+        <Route path="/Main" component={Main} />
         <Route path="/Project" component={Project} />
         <Route path="/Create" component={Create} />
         <Route path="/Search" component={Search} />
