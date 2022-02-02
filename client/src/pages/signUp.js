@@ -14,13 +14,13 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Signup() {
-const [username, setUsername] = useState('');
-const [github, setGithub] = useState('');
-const [languages, setLanguages] = useState('');
-const [skills, setSkills] = useState('');
-const [experienceLevel, setExperienceLevel] = useState('');
+  const [username, setUsername] = useState("");
+  const [github, setGithub] = useState("");
+  const [languages, setLanguages] = useState("");
+  const [skills, setSkills] = useState("");
+  const [experienceLevel, setExperienceLevel] = useState("");
 
-  const [addProfile, { error }] = useMutation(CREATE_USER);
+  const [addProfile, { error, data }] = useMutation(CREATE_USER);
 
   const [formState, setFormState] = useState({
     username: "",
@@ -29,7 +29,6 @@ const [experienceLevel, setExperienceLevel] = useState('');
     skills: "",
     experienceLevel: "",
   });
-
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -42,19 +41,15 @@ const [experienceLevel, setExperienceLevel] = useState('');
   const handleFormSubmit = async (event) => {
     event.preventDefault();
 
-    try {
-      const data = await addProfile({
-        variables: { username, github, languages, experienceLevel, skills },
-      });
+    addProfile({
+      variables: { username, github, languages, experienceLevel, skills },
+    });
 
-      setUsername('');
-      setGithub('');
-      setLanguages('');
-      setSkills('');
-      setExperienceLevel('');
-        } catch (err) {
-      console.error(err);
-    }
+    setUsername("");
+    setGithub("");
+    setLanguages("");
+    setSkills("");
+    setExperienceLevel("");
   };
 
   return (
