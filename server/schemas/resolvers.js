@@ -7,7 +7,8 @@ const resolvers = {
     },
     projects: async (parent, { _id }) => {
       const params = _id ? { _id } : {};
-      return Project.find(params);
+      const projects = await Project.find(params);
+      return projects;
     },
     me: async (parent, args, context) => {
       if (context.user) {
