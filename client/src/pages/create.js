@@ -13,15 +13,8 @@ const dropdownCSS =
 const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
-function Create({ userId }) {
-  const [projectName, setProjectName] = useState("");
-  const [github, setGithub] = useState("");
-  const [skills, setSkills] = useState("");
-  const [communication, setCommunication] = useState("");
-  const [description, setDescription] = useState("");
-  const [languages, setLanguages] = useState("");
-
-  const [addProject, { error }] = useMutation(UPDATE_USER);
+function Create() {
+  const [addProject, { error, data }] = useMutation(UPDATE_USER);
 
   const [formState, setFormState] = useState({
     projectName: "",
@@ -31,7 +24,6 @@ function Create({ userId }) {
     description: "",
     languages: "",
   });
-
   const handleChange = (event) => {
     const { name, value } = event.target;
 
@@ -40,33 +32,38 @@ function Create({ userId }) {
       [name]: value,
     });
   };
-  console.log("we are rendering");
   const handleFormSubmit = async (event) => {
-    console.log("got here");
     event.preventDefault();
+    const {
+      userId,
+      projectName,
+      languages,
+      skills,
+      description,
+      github,
+      communication,
+    } = formState;
 
-    try {
-      const data = await addProject({
-        variables: {
-          userId,
-          projectName,
-          languages,
-          skills,
-          description,
-          github,
-          communication,
-        },
-      });
-
-      setProjectName("");
-      setGithub("");
-      setSkills("");
-      setCommunication("");
-      setDescription("");
-      setLanguages("");
-    } catch (err) {
-      console.error(err);
-    }
+    addProject({
+      variables: {
+        userId,
+        projectName,
+        languages,
+        skills,
+        description,
+        github,
+        communication,
+      },
+    });
+    setFormState({
+      userId: "",
+      projectName: "",
+      languages: "",
+      skills: "",
+      description: "",
+      github: "",
+      communication: "",
+    });
   };
 
   return (
