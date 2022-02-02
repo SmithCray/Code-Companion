@@ -15,10 +15,9 @@ export const CREATE_USER = gql`
       experienceLevel: $experienceLevel
       skills: $skills
     ) {
-      userId
       username
       github
-      langauges
+      languages
       experienceLevel
       skills
     }

@@ -42,7 +42,13 @@ function Signup() {
     event.preventDefault();
 
     addProfile({
-      variables: { username, github, languages, experienceLevel, skills },
+      variables: {
+        username,
+        github,
+        languages,
+        experienceLevel: Number(experienceLevel),
+        skills,
+      },
     });
 
     setUsername("");
