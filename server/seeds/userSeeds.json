@@ -5,7 +5,8 @@
         "languages": "JavaScript",
         "experienceLevel": 2,
         "projects": [],
-        "skills": "GraphQL, SQL, NodeJS"      
+        "skills": "GraphQL, SQL, NodeJS" ,   
+        "userId": "one"
     },
     {
         "username": "Max Red",
@@ -13,7 +14,8 @@
         "languages": "PHP",
         "experienceLevel": 3,
         "projects": [],
-        "skills": "React, Handlebars"      
+        "skills": "React, Handlebars",
+        "userId": "two"  
     },
     {
         "username": "John Doe",
@@ -21,7 +23,8 @@
         "languages": "C#",
         "experienceLevel": 5,
         "projects": [],
-        "skills": "MongoDB"      
+        "skills": "MongoDB",
+        "userId": "three"
     },
     {
         "username": "Alan Kay",
@@ -29,7 +32,8 @@
         "languages": "HTML",
         "experienceLevel": 1,
         "projects": [],
-        "skills": "Insomnia"      
+        "skills": "Insomnia",
+        "userId": "five"
     },
     {
         "username": "Don Knuth",
@@ -37,7 +41,8 @@
         "languages": "CSS",
         "experienceLevel": 1,
         "projects": [],
-        "skills": "Tailwind"      
+        "skills": "Tailwind",
+        "userId": "four"   
     }
 ]
 
