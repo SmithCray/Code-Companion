@@ -15,7 +15,7 @@ function Profile() {
     }
   );
 
-  const profile = data?.me || data?.user || {};
+  const user = data?.me || data?.user || {};
 
   if (loading) {
     return <div>Loading...</div>;

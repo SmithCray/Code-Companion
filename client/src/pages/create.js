@@ -14,6 +14,14 @@ const liCSS =
   "dropdown-item text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-gray-700 hover:bg-gray-100";
 
 function Create() {
+  const [projectName, setProjectName] = useState('');
+  const [github, setGithub] = useState('');
+  const [skills, setSkills] = useState('');
+  const [communication, setCommunication] = useState('');
+  const [description, setDescription] = useState('');
+  const [languages, setLanguages] = useState('');
+
+
   const [addProject, { error }] = useMutation(UPDATE_USER);
 
   const [formState, setFormState] = useState({
@@ -22,6 +30,7 @@ function Create() {
     skills: "",
     communication: "",
     description: "",
+    languages: "",
   });
 
   const handleChange = (event) => {
@@ -48,13 +57,13 @@ function Create() {
         },
       });
 
-      setFormState({
-        projectName: "",
-        github: "",
-        skills: "",
-        communication: "",
-        description: "",
-      });
+      
+        setProjectName('');
+        setGithub('');
+        setSkills('');
+        setCommunication('');
+        setDescription('');
+        setLanguages('');
     } catch (err) {
       console.error(err);
     }
@@ -90,43 +99,13 @@ function Create() {
               </div>
               <div className="m-2 p-2">
                 <h3>Languages:</h3>
-                <div className="flex" name="languages" input="languages">
-                  <div className="flex">
-                    <h3>Javascript</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>C#</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>Python</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>Typescript</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                  <div className="flex">
-                    <h3>C++</h3>
-                    <input
-                      type="checkbox"
-                      className="mr-20 ml-1.5 mt-1.5"
-                    ></input>
-                  </div>
-                </div>
+                <input
+                  className={inputStyle}
+                  type="languages"
+                  name="languages"
+                  value={formState.languages}
+                  onChange={handleChange}
+                />
               </div>
               <div className="flex m-2 p-2">
                 <h3>Technologies:</h3>
