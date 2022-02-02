@@ -25,7 +25,7 @@ export const CREATE_USER = gql`
   }
 `;
 
-export const CREATE_PROJECT = gql`
+export const UPDATE_USER = gql`
   mutation updateUser(
     $projectName: String!
     $languages: String!
