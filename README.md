@@ -18,7 +18,7 @@
 
 - [Auth0](https://auth0.com/why-auth0?utm_content=homepage&utm_source=google&utm_medium=cpc&utm_term=auth0&utm_campaign=amer-usa-search-branded&utm_id=go_cmp-12865209972_adg-123980878280_ad-552575974978_kwd-331982174580_dev-c_ext-_prd-_mca-_sig-Cj0KCQiA0eOPBhCGARIsAFIwTs6PeOZ8wvV2zfpytjwQTZXBxwCKxoPZizymJUrAvFwv3-rnpIccIiIaAnSWEALw_wcB&gclid=Cj0KCQiA0eOPBhCGARIsAFIwTs6PeOZ8wvV2zfpytjwQTZXBxwCKxoPZizymJUrAvFwv3-rnpIccIiIaAnSWEALw_wcB)
 
-                "Auth0" enables access to a single sign-on application that runs on multiple platforms with various identity providers, using JavaScript to power applications. Developers who are using Auth0 can customize stages of the authentication and authorization process, and connect applications and APIs to the database of users and passwords. Developers also maintain the authority to add and remove users as needed through the integration.
+"Auth0" enables access to a single sign-on application that runs on multiple platforms with various identity providers, using JavaScript to power applications. Developers who are using Auth0 can customize stages of the authentication and authorization process, and connect applications and APIs to the database of users and passwords. Developers also maintain the authority to add and remove users as needed through the integration.
 
 <br>
 
@@ -46,17 +46,17 @@ In terms of Heroku deployment we initially posted with a few errors and issues, 
 
 <br>
 
-As a User
+As a User:
 
-        I want a website I can go to as a new or experienced programmer to find people to partner with and work on various coding projects with others.
+- I want a website I can go to as a new or experienced programmer to find people to partner with and work on various coding projects with others.
 
-Then
+Then:
 
-        I want a list of projects other users are looking for teammates to help create with specifics on language/stack as well as an option to post new projects you are looking for team members on.
+- I want a list of projects other users are looking for teammates to help create with specifics on language/stack as well as an option to post new projects you are looking for team members on.
 
-So that
+So that:
 
-        I can continue learning and growing my skill set and network with other programmers that can help mentor me or I can help mentor them depending on experience level.
+ - I can continue learning and growing my skill set and network with other programmers that can help mentor me or I can help mentor them depending on experience level.
 
 <br>
 
