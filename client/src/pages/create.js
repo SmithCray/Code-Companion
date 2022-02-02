@@ -29,19 +29,27 @@ function Create() {
     });
   };
 
-  // const handleFormSubmit = async (event) => {
-  //   event.preventDefault();
-  //   console.log(formState);
-  //   try {
-  //     const { data } = await login({
-  //       variables: { ...formState },
-  //     });
+//   const handleFormSubmit = async (event) => {
+//     event.preventDefault();
+//     console.log(formState);
+//     try {
+//       const { data } = await login({
+//         variables: { ...formState },
+//       });
 
-  //     Auth.login(data.login.token);
-  //   } catch (e) {
-  //     console.error(e);
-  //   }
-  // };
+//       Auth.login(data.login.token);
+//     } catch (e) {
+//       console.error(e);
+//     }
+
+//     setFormState({
+//         projectName: "",
+//         github: "",
+//         skills: "",
+//         communication: "",
+//         description: ""
+//       });
+//   };
 
   return (
     <>
@@ -49,7 +57,9 @@ function Create() {
       <div className="bg-[url('../styles/img/landing.png')] pt-16">
         <div className="flex justify-center bg-white border-black border-2 rounded-md w-1/2 mx-auto mt-20">
           <div>
-            <form className="flex-col">
+            <form className="flex-col" 
+            // onSubmit={handleFormSubmit}
+            >
               <img className="h-32 w-60" src={logo} alt="" />
               <div className="flex m-2 p-2">
                 <h3>Project Name:</h3>
@@ -126,7 +136,7 @@ function Create() {
                   onChange={handleChange}
                 />
               </div>
-              <button className={buttonCSS}>Save</button>
+              <button className={buttonCSS} type="submit">Save</button>
             </form>
           </div>
         </div>
