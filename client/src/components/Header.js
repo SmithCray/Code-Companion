@@ -102,7 +102,7 @@ function Header() {
           <div></div>
         )}
         {location.pathname !== "/Profile" ? (
-          <Link to="/Main/" className={mobileButton}>
+          <Link to="/Main" className={mobileButton}>
             My Profile
           </Link>
         ) : (

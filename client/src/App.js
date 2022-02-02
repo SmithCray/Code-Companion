@@ -6,7 +6,6 @@ import { useAuth0 } from "@auth0/auth0-react";
 
 import Landing from "./pages/landing";
 import Main from "./pages/main";
-import Project from "./pages/project";
 import Search from "./pages/search";
 import Signup from "./pages/signUp";
 import Create from "./pages/create";
@@ -24,7 +23,6 @@ function App() {
       <Switch>
         <Route path="/" exact component={Landing} />
         <Route path="/Main" component={Main} />
-        <Route path="/Project" component={Project} />
         <Route path="/Create" component={Create} />
         <Route path="/Search" component={Search} />
         <Route path="/Signup" component={Signup} />
