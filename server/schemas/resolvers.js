@@ -16,9 +16,12 @@ const resolvers = {
       { username, github, languages, experienceLevel, skills },
       context
     ) => {
-      const auth0Id = context.user.sub;
+      if (!context.authenticated) {
+        throw Error("User is not authenticated");
+      }
+      const userId = context.user.sub;
       const user = await User.create({
-        _id: auth0Id,
+        userId,
         username,
         github,
         languages,
@@ -26,15 +29,19 @@ const resolvers = {
         //projects,
         skills,
       });
-      return { user };
+      return user;
     },
     updateUser: async (
       parent,
       { projectName, languages, skills, description, github, communication },
       context
     ) => {
-      if (!context.isAuthenticated) {
+      if (!context.authenticated) {
         throw Error("User is not authenticated");
+      }
+      const user = await User.findOne({ userId: context.user.sub });
+      if (!user) {
+        throw Error("You have not yet created a user");
       }
       const project = await Project.create({
         projectName,
@@ -46,28 +53,27 @@ const resolvers = {
         communication,
       });
 
-      await User.findOneAndUpdate(
-        { _id: context.user.sub },
+      await user.update(
         { $addToSet: { projects: project._id } },
         { new: true, runValidators: true }
       );
       return project;
     },
-    cancelProject: async (parent, { projectId }, context) => {
-      if (!context.isAuthenticated) {
+    cancelProject: async (parent, { projectName }, context) => {
+      if (!context.authenticated) {
         throw Error("User is not authenticated");
       }
-      return Project.findOneAndDelete(
-        { _id: projectId },
+      await Project.findOneAndDelete(
+        { projectName, creator: context.user.username },
         {
           $pull: {
             projects: {
-              _id: projectId,
+              projectName,
             },
           },
-        },
-        { new: true }
+        }
       );
+      return { success: true, message: "got'em" };
     },
   },
 };
